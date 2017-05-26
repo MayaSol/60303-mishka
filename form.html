@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body class="page  page--form">
+
+  <header class="page-header">
+        <nav class="main-nav  main-nav--closed">
+          <div class="main-nav__header">
+            <a href="index.html" class="logo">
+              <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
+            </a>
+            <button class="main-nav__toggle" type="button"></button>
+          </div>
+          <ul class="main-nav__items">
+            <li class='main-nav__item'>
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class='main-nav__item'>
+              <a>Вязание на заказ</a>
+            </li>
+            <li class='search  main-nav__item'>
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class='cart  main-nav__item'>
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </nav>
+
+        <h1 class="page-header__title">Вязание на заказ</h1>
+  </header>
+
+
+  <main>
+
+    <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+
+      <section class="section-form">
+        <h2 class="section-form__title">Тип</h2>
+        <ul class="list-radio">
+          <li>
+            <input class="field-radio" type="radio" name="type" value="interior" id="interior" checked>
+            <label class="lbl-radio" for="interior">Аксессуар для интерьера</label>
+          </li>
+          <li>
+            <input class="field-radio" type="radio" name="type" value="toy" id="toy">
+            <label class="lbl-radio" for="toy">Детская игрушка</label>
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="section-form">
+        <h2 class="section-form__title">Цвет</h2>
+        <ul class="list-checkbox">
+            <li>
+              <input class="field-checkbox" type="checkbox" name="white" id="white"  checked>
+              <label class="lbl-checkbox" for="white">Белый</label>
+            </li>
+            <li>
+              <input class="field-checkbox" type="checkbox" name="grey" id="grey"  checked>
+              <label class="lbl-checkbox" for="grey">Серый</label>
+            </li>
+            <li>
+              <input class="field-checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="lbl-checkbox" for="tiffany">«Тиффани»</label>
+            </li>
+            <li>
+              <input class="field-checkbox" type="checkbox" name="black" id="black">
+              <label class="lbl-checkbox" for="black">Черный</label>
+            </li>
+            <li>
+              <input class="field-checkbox" type="checkbox" name="pink" id="pink">
+              <label class="lbl-checkbox" for="pink">Розовый</label>
+            </li>
+            <li>
+              <input class="field-checkbox" type="checkbox" name="orange" id="orange">
+              <label class="lbl-checkbox" for="orange">Оранжевый</label>
+            </li>
+        </ul>
+      </section>
+
+      <section class="section-form">
+        <h2 class="section-form__title">ФИО</h2>
+        <ul class="list-textfield">
+          <li>
+            <label class="lbl-text" for="name">Имя:</label>
+            <input class="field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+          </li>
+          <li>
+            <label class="lbl-text" for="secname">Фамилия:</label>
+            <input class="field-text" type="text" name="secname" id="secname" placeholder="Укажите фамилию*" required>
+          </li>
+          <li>
+            <label class="lbl-text" for="patronymic">Отчество:</label>
+            <input class="field-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          </li>
+        </ul>
+      </section>
+
+      <section class="section-form">
+        <h2 class="section-form__title">тел</h2>
+        <input class="field-text  field-text--tel" type="tel" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХ ХХ*"
+        pattern="\+7 [0-9]{3} [0-9]{2} [0-9]{2}" required>
+      </section>
+
+      <section class="section-form">
+        <h2 class="section-form__title">E-mail</h2>
+        <input class="field-text  field-text--email" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
+      </section>
+
+      <section class="section-form">
+        <h2 class="section-form__title">Доп</h2>
+        <textarea name="order-request">Опишите все ваши пожелания к заказу</textarea>
+      </section>
+
+      <span class="order-form__legend">*Поля обязательны для заполнения</span>
+
+      <button class="btn  order-form__btn-order" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+    </form>
+  </main>
+
+
+  <footer  class="page-footer">
+
+    <div class="socials  page-footer__socials">
+      <ul class="socials__list">
+        <li><a class="social-link  social-link--in" href="https://www.instagram.com/">Instagram</a></li>
+        <li><a class="social-link  social-link--fb" href="https://www.facebook.com/">Facebook</a></li>
+        <li><a class="social-link  social-link--tw" href="https://twitter.com/">Twitter</a></li>
+      </ul>
+    </div>
+
+      <div class="page-footer__credentials">
+        <span>Разработано</span>
+        <span class="page-footer__credetials-logo">
+          <a href="https://htmlacademy.ru/" class="logo-htmlacademy">
+            <img src="http://placehold.it/27x34" width="27" height="34" alt="htmlacademy">
+          </a>
+        </span>
+      </div>
+  </footer>
+
+</body>
+</html>

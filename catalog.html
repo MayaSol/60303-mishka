@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HTML Academy: Мишка</title>
+  <title>HTML Academy: Мишка - Каталог</title>
 </head>
 <body class="page  page--catalog">
 
@@ -39,9 +39,11 @@
 
       <div class="products__list">
         <article class="products__item  item-products">
-          <img class="item-products__img" src="http://placehold.it/260x195"
+          <a href="hare.html">
+            <img class="item-products__img" src="http://placehold.it/260x195"
             width="260" height="195" alt="Зайчик-попрыгайчик">
-          <h3>Зайчик-попрыгайчик</h3>
+          </a>
+          <h3><a href="hare.html">Зайчик-попрыгайчик</a></h3>
           <p>Рост 30 см, вес 200 г</p>
           <div class="item-products__container">
             <span class="item-products__price">1 200 руб.</span>
@@ -50,9 +52,11 @@
         </article>
 
         <article class="products__item  item-products">
-          <img class="item-products__img" src="http://placehold.it/260x195"
+          <a href="basket-linen.html">
+            <img class="item-products__img" src="http://placehold.it/260x195"
             width="260" height="195" alt="Корзинка для белья">
-          <h3>Корзинка для белья</h3>
+          </a>
+          <h3><a href="basket-linen.html">Корзинка для белья</a></h3>
           <p>Диаметр 15 см, высота 10 см</p>
           <div class="item-products__container">
             <span class="item-products__price">690 руб.</span>
@@ -61,9 +65,11 @@
         </article>
 
         <article class="products__item  item-products">
-          <img class="item-products__img" src="http://placehold.it/260x195"
+          <a href="basket-toy-big.html">
+            <img class="item-products__img" src="http://placehold.it/260x195"
             width="260" height="195" alt="Большая корзинка для игрушек">
-          <h3>Большая корзинка для игрушек</h3>
+          </a>
+          <h3><a href="basket-toy-big.html">Большая корзинка для игрушек</a></h3>
           <p>Диаметр 30 см, высота 30 см</p>
           <div class="item-products__container">
             <span class="item-products__price">1 500 руб.</span>
@@ -75,12 +81,11 @@
 
     <section class="video  video--process">
       <h2 class="video__header">Процесс производства</h2>
-      <video width="260" height="150" controls>
-        <source src="video/720x480.mp4" type="video/mp4">
-        <source src="video/720x480.ogv" type="video/ogg">
-        <source src="video/720x480.webm" type="video/webm">
+      <div class="video__container">
+        <video width="260" height="150" poster="http://placehold.it/260x150" controls>
+        </video>
         <div class="video__btn  btn-video"></div>
-      </video>
+      </div>
       <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       <a href="#" class="btn">Сделать заказ</a>
     </section>
@@ -101,7 +106,7 @@
       <div class="page-footer__credentials">
         <span>Разработано</span>
         <span class="page-footer__credetials-logo">
-          <a href="https://htmlacademy.ru/" class="logo-htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-htmlacademy">
             <img src="http://placehold.it/27x34" width="27" height="34" alt="htmlacademy">
           </a>
         </span>

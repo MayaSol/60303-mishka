@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HTML Academy: Мишка</title>
+  <title>HTML Academy: Мишка - Вязание на заказ</title>
 </head>
 <body class="page  page--form">
 
@@ -43,14 +43,14 @@
 
       <section class="section-form">
         <h2 class="section-form__title">Тип</h2>
-        <ul class="list-radio">
+        <ul class="list-form  list-form--radio">
           <li>
-            <input class="field-radio" type="radio" name="type" value="interior" id="interior" checked>
-            <label class="lbl-radio" for="interior">Аксессуар для интерьера</label>
+            <input class="list-form__field-radio" type="radio" name="type" value="interior" id="interior" checked>
+            <label class="list-form__lbl-radio" for="interior">Аксессуар для интерьера</label>
           </li>
           <li>
-            <input class="field-radio" type="radio" name="type" value="toy" id="toy">
-            <label class="lbl-radio" for="toy">Детская игрушка</label>
+            <input class="list-form__field-radio" type="radio" name="type" value="toy" id="toy">
+            <label class="list-form__lbl-radio" for="toy">Детская игрушка</label>
           </li>
         </ul>
       </section>
@@ -58,50 +58,48 @@
 
       <section class="section-form">
         <h2 class="section-form__title">Цвет</h2>
-        <ul class="list-checkbox">
+        <ul class="list-form  list-form--checkbox">
             <li>
-              <input class="field-checkbox" type="checkbox" name="white" id="white"  checked>
-              <label class="lbl-checkbox" for="white">Белый</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="white" id="white"  checked>
+              <label class="list-form__lbl-checkbox" for="white">Белый</label>
             </li>
             <li>
-              <input class="field-checkbox" type="checkbox" name="grey" id="grey"  checked>
-              <label class="lbl-checkbox" for="grey">Серый</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="grey" id="grey"  checked>
+              <label class="list-form__lbl-checkbox" for="grey">Серый</label>
             </li>
             <li>
-              <input class="field-checkbox" type="checkbox" name="tiffany" id="tiffany">
-              <label class="lbl-checkbox" for="tiffany">«Тиффани»</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="list-form__lbl-checkbox" for="tiffany">«Тиффани»</label>
             </li>
             <li>
-              <input class="field-checkbox" type="checkbox" name="black" id="black">
-              <label class="lbl-checkbox" for="black">Черный</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="black" id="black">
+              <label class="list-form__lbl-checkbox" for="black">Черный</label>
             </li>
             <li>
-              <input class="field-checkbox" type="checkbox" name="pink" id="pink">
-              <label class="lbl-checkbox" for="pink">Розовый</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="pink" id="pink">
+              <label class="list-form__lbl-checkbox" for="pink">Розовый</label>
             </li>
             <li>
-              <input class="field-checkbox" type="checkbox" name="orange" id="orange">
-              <label class="lbl-checkbox" for="orange">Оранжевый</label>
+              <input class="list-form__field-checkbox" type="checkbox" name="orange" id="orange">
+              <label class="list-form__lbl-checkbox" for="orange">Оранжевый</label>
             </li>
         </ul>
       </section>
 
       <section class="section-form">
         <h2 class="section-form__title">ФИО</h2>
-        <ul class="list-textfield">
-          <li>
-            <label class="lbl-text" for="name">Имя:</label>
-            <input class="field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-          </li>
-          <li>
-            <label class="lbl-text" for="secname">Фамилия:</label>
-            <input class="field-text" type="text" name="secname" id="secname" placeholder="Укажите фамилию*" required>
-          </li>
-          <li>
-            <label class="lbl-text" for="patronymic">Отчество:</label>
-            <input class="field-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
-          </li>
-        </ul>
+        <p>
+          <label class="lbl-text" for="name">Имя:</label>
+          <input class="field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+        </p>
+        <p>
+          <label class="lbl-text" for="secname">Фамилия:</label>
+          <input class="field-text" type="text" name="secname" id="secname" placeholder="Укажите фамилию*" required>
+        </p>
+        <p>
+          <label class="lbl-text" for="patronymic">Отчество:</label>
+          <input class="field-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+        </p>
       </section>
 
       <section class="section-form">
@@ -140,7 +138,7 @@
       <div class="page-footer__credentials">
         <span>Разработано</span>
         <span class="page-footer__credetials-logo">
-          <a href="https://htmlacademy.ru/" class="logo-htmlacademy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-htmlacademy">
             <img src="http://placehold.it/27x34" width="27" height="34" alt="htmlacademy">
           </a>
         </span>

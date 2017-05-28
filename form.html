@@ -36,7 +36,7 @@
 
   <main>
 
-    <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form  form--order" action="https://echo.htmlacademy.ru/" method="post">
 
       <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
@@ -45,12 +45,12 @@
         <h2 class="section-form__title">Тип</h2>
         <ul class="list-form  list-form--radio">
           <li>
-            <input class="list-form__field-radio" type="radio" name="type" value="interior" id="interior" checked>
-            <label class="list-form__lbl-radio" for="interior">Аксессуар для интерьера</label>
+            <input class="form__field-radio" type="radio" name="type" value="interior" id="interior" checked>
+            <label class="form__lbl  form__lbl--radio" for="interior">Аксессуар для интерьера</label>
           </li>
           <li>
-            <input class="list-form__field-radio" type="radio" name="type" value="toy" id="toy">
-            <label class="list-form__lbl-radio" for="toy">Детская игрушка</label>
+            <input class="form__field-radio" type="radio" name="type" value="toy" id="toy">
+            <label class="form__lbl  form__lbl--radio" for="toy">Детская игрушка</label>
           </li>
         </ul>
       </section>
@@ -60,28 +60,28 @@
         <h2 class="section-form__title">Цвет</h2>
         <ul class="list-form  list-form--checkbox">
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="white" id="white"  checked>
-              <label class="list-form__lbl-checkbox" for="white">Белый</label>
+              <input class="form__field-checkbox" type="checkbox" name="white" id="white"  checked>
+              <label class="form__lbl  form__lbl--checkbox" for="white">Белый</label>
             </li>
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="grey" id="grey"  checked>
-              <label class="list-form__lbl-checkbox" for="grey">Серый</label>
+              <input class="form__field-checkbox" type="checkbox" name="grey" id="grey"  checked>
+              <label class="form__lbl  form__lbl--checkbox" for="grey">Серый</label>
             </li>
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="tiffany" id="tiffany">
-              <label class="list-form__lbl-checkbox" for="tiffany">«Тиффани»</label>
+              <input class="form__field-checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="form__lbl  form__lbl--checkbox" for="tiffany">«Тиффани»</label>
             </li>
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="black" id="black">
-              <label class="list-form__lbl-checkbox" for="black">Черный</label>
+              <input class="form__field-checkbox" type="checkbox" name="black" id="black">
+              <label class="form__lbl  form__lbl--checkbox" for="black">Черный</label>
             </li>
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="pink" id="pink">
-              <label class="list-form__lbl-checkbox" for="pink">Розовый</label>
+              <input class="form__field-checkbox" type="checkbox" name="pink" id="pink">
+              <label class="form__lbl  form__lbl--checkbox" for="pink">Розовый</label>
             </li>
             <li>
-              <input class="list-form__field-checkbox" type="checkbox" name="orange" id="orange">
-              <label class="list-form__lbl-checkbox" for="orange">Оранжевый</label>
+              <input class="form__field-checkbox" type="checkbox" name="orange" id="orange">
+              <label class="form__lbl  form__lbl--checkbox" for="orange">Оранжевый</label>
             </li>
         </ul>
       </section>
@@ -89,38 +89,37 @@
       <section class="section-form">
         <h2 class="section-form__title">ФИО</h2>
         <p>
-          <label class="lbl-text" for="name">Имя:</label>
-          <input class="field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+          <label class="form__lbl" for="name">Имя:</label>
+          <input class="form__field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
         </p>
         <p>
-          <label class="lbl-text" for="secname">Фамилия:</label>
-          <input class="field-text" type="text" name="secname" id="secname" placeholder="Укажите фамилию*" required>
+          <label class="form__lbl" for="secname">Фамилия:</label>
+          <input class="form__field-text" type="text" name="secname" id="secname" placeholder="Укажите фамилию*" required>
         </p>
         <p>
-          <label class="lbl-text" for="patronymic">Отчество:</label>
-          <input class="field-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          <label class="form__lbl" for="patronymic">Отчество:</label>
+          <input class="form__field-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
         </p>
       </section>
 
       <section class="section-form">
         <h2 class="section-form__title">тел</h2>
-        <input class="field-text  field-text--tel" type="tel" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХ ХХ*"
-        pattern="\+7 [0-9]{3} [0-9]{2} [0-9]{2}" required>
+        <input class="form__field-text  form__field-text--tel" type="tel" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХ ХХ*" pattern="\+7 [0-9]{3} [0-9]{2} [0-9]{2}" required>
       </section>
 
       <section class="section-form">
         <h2 class="section-form__title">E-mail</h2>
-        <input class="field-text  field-text--email" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
+        <input class="form__field-text  form__field-text--email" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
       </section>
 
       <section class="section-form">
         <h2 class="section-form__title">Доп</h2>
-        <textarea name="order-request">Опишите все ваши пожелания к заказу</textarea>
+        <textarea class="form__field-text  form__field-text--area" name="order-request">Опишите все ваши пожелания к заказу</textarea>
       </section>
 
-      <span class="order-form__legend">*Поля обязательны для заполнения</span>
+      <span class="form__legend">*Поля обязательны для заполнения</span>
 
-      <button class="btn  order-form__btn-order" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+      <button class="btn  form__btn-order" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
     </form>
   </main>
 

@@ -3,38 +3,69 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page  page--index">
 
     <header class="page-header">
-        <nav class="main-nav  main-nav--closed">
+        <nav class="main-nav">
           <div class="main-nav__header">
-            <a class="logo">
-              <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
-            </a>
-            <button class="main-nav__toggle" type="button"></button>
+            <div class="main-nav__header-inner">
+              <div class="main-nav__logo-wrapper">
+                <a class="logo  main-nav__logo">Mishka</a>
+              </div>
+              <div class="main-nav__toggle-wrapper">
+                <button class="main-nav__toggle" type="button"></button>
+              </div>
+            </div>
           </div>
           <ul class="main-nav__items">
-            <li class='main-nav__item'>
-              <a href="catalog.html">Каталог товаров</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
+                <span>Каталог товаров</span>
+              </a>
             </li>
-            <li class='main-nav__item'>
-              <a href="form.html">Вязание на заказ</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                <span>Вязание на заказ</span>
+              </a>
             </li>
-            <li class='search  main-nav__item'>
-              <a href="#">Поиск по сайту</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--search" href="#">
+                <span>Поиск по сайту</span>
+              </a>
             </li>
-            <li class='cart  main-nav__item'>
-              <a href="#">Корзина: пока пуста</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--cart" href="#">
+                <span>Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
         </nav>
 
-        <h1 class="page-header__title">Милые штуки ручной <br>работы для дома</h1>
+        <div class="page-header__title-wrapper">
+          <h1 class="page-header__title">Милые штуки ручной <br>работы для дома</h1>
+        </div>
 
         <ul class="main-links">
-          <li class="main-links__item"><a href="interior.html">Предметы <br>интерьера</a></li>
-          <li class="main-links__item"><a href="toys.html">Детские <br>игрушки</a></li>
+          <li class="main-links__item">
+            <a class="main-links__link  main-links__link--interior" href="interior.html">
+              <span class="main-links__container">
+                <span class="main-links__text">
+                  Предметы <br>интерьера
+                </span>
+              </span>
+            </a>
+          </li>
+          <li class="main-links__item">
+            <a class="main-links__link  main-links__link--toys" href="toys.html">
+              <span class="main-links__container">
+                <span class="main-links__text">
+                  Детские <br>игрушки
+                </span>
+              </span>
+            </a>
+          </li>
         </ul>
     </header>
 
@@ -158,6 +189,8 @@
         </span>
       </div>
     </footer>
+
+    <script src="js/main-nav.js"></script>
 
   </body>
 </html>

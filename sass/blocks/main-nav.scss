@@ -19,9 +19,9 @@
 
 .main-nav__logo {
   display: inline-block;
+  vertical-align: middle;
   height: 35px;
   width: 86px;
-  vertical-align: middle;
   line-height: 0;
   background-image: url("../img/logo-mobile.svg");
 }
@@ -56,6 +56,7 @@
     width: 20px;
     height: 14px;
     background-image: url("../img/icon-menu-open.svg");
+    z-index: 99;
   }
 }
 
@@ -64,6 +65,7 @@
     position: absolute;
     display: block;
     width: 100%;
+    z-index: 99;
   }
 
   .main-nav__toggle {
@@ -74,15 +76,15 @@
     width: 21px;
     height: 20px;
     background-image: url("../img/icon-menu-close.svg");
+    z-index: 99;
   }
 }
 
 .main-nav__link {
     display: block;
-    height: 78px;
+    min-height: 78px;
     line-height: 78px;
     color: #000000;
-    vertical-align: middle;
     text-align: center;
     text-decoration: none;
     background-color: #ffffff;
@@ -124,8 +126,3 @@
 
     }
   }
-
-
-
-
-

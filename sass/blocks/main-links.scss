@@ -7,7 +7,7 @@
 
 .main-links__link {
   display: block;
-  height: 103px;
+  min-height: 103px;
   line-height: 103px;
   color: #ffffff;
   text-decoration: none;
@@ -66,5 +66,3 @@
     }
   }
 }
-
-

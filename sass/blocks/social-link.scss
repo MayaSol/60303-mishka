@@ -1,0 +1,22 @@
+.social-link {
+  display: block;
+
+  &--in {
+    width: 22px;
+    height: 21px;
+    background-image: url("../img/icon-insta.svg");
+  }
+
+  &--fb {
+    width: 15px;
+    height: 29px;
+    background-image: url("../img/icon-fb.svg");
+  }
+
+  &--tw {
+    width: 24px;
+    height: 20px;
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+}

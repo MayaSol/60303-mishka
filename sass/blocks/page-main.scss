@@ -26,3 +26,11 @@
   }
 
 }
+
+.page--catalog {
+
+  .page-main__products {
+    padding-top: 30px;
+    @include container;
+  }
+}

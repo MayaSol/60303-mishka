@@ -1,11 +1,12 @@
 @import "variables.scss";
 @import "mixins.scss";
-/*@import "global/normalize.scss";*/
+@import "global/normalize.scss";
 @import "global/fonts.scss";
 @import "blocks/slider.scss";
 @import "global/base.scss";
 @import "blocks/link-mail.scss";
-@import "blocks/page.scss";
+@import "blocks/btn-cart.scss";
+@import "blocks/page-main.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/main-links.scss";
@@ -18,3 +19,7 @@
 @import "blocks/socials.scss";
 @import "blocks/social-link.scss";
 @import "blocks/logo-htmlacademy.scss";
+@import "blocks/products.scss";
+@import "blocks/video.scss";
+@import "blocks/btn-video.scss";
+@import "blocks/form.scss";

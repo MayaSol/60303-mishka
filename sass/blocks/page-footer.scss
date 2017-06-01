@@ -1,11 +1,11 @@
 .page-footer {
-  background-color: $color-grey-lighter;
+  background-color: $color-grey-light;
 }
 
 .page-footer__socials {
   min-height: 80px;
   line-height: 80px;
-  border-bottom: 1px solid $color-grey-light;
+  border-bottom: 1px solid $color-grey;
   @include container;
 }
 

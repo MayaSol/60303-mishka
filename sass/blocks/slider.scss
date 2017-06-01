@@ -11,16 +11,16 @@
   box-shadow: none;
   background-color: transparent;
 
-   &--prev {
+  &--prev {
     float: left;
     background-image: url("../img/icon-left-arrow.svg");
     background-repeat: no-repeat;
-   }
+  }
 
-   &--next {
+  &--next {
     float: right;
     background-image: url("../img/icon-right-arrow.svg");
     background-repeat: no-repeat;
-   }
+  }
 
 }

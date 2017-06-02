@@ -1,0 +1,26 @@
+.slider__btns {
+  padding: 13px 40px;
+  @include clearfix;
+}
+
+.slider__btn {
+  width: 51px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
+  &--prev {
+    float: left;
+    background-image: url("../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--next {
+    float: right;
+    background-image: url("../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+}

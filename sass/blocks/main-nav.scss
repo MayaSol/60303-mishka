@@ -1,0 +1,128 @@
+.main-nav__header {
+  height: 79px;
+}
+
+.main-nav__header-inner {
+  position: relative;
+  @include container;
+  @include clearfix;
+}
+
+.main-nav__logo-wrapper {
+  width:86px;
+  height: 79px;
+  margin-left:auto;
+  margin-right: auto;
+  line-height: 79px;
+  font-size: 0;
+}
+
+.main-nav__logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 35px;
+  width: 86px;
+  line-height: 0;
+  background-image: url("../img/logo-mobile.svg");
+}
+
+
+.main-nav__toggle {
+  display: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.main-nav--closed {
+  .main-nav__items {
+    position: absolute;
+    display: none;
+  }
+
+  .main-nav__toggle {
+    display: block;
+    position: absolute;
+    top:32px;
+    right: 31px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../img/icon-menu-open.svg");
+    z-index: 99;
+  }
+}
+
+.main-nav--opened {
+  .main-nav__items {
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .main-nav__toggle {
+    display: block;
+    position: absolute;
+    top: 29px;
+    right: 30px;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/icon-menu-close.svg");
+    z-index: 99;
+  }
+}
+
+.main-nav__link {
+    display: block;
+    min-height: 78px;
+    line-height: 78px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-top: 2px solid #e5e5e5;
+
+    span {
+      position: relative;
+      padding-left: 46px;
+      font-size: 1.7rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+      @include container;
+    }
+
+    &--search {
+
+      span::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 18px;
+        height: 19px;
+        background-image: url("http://placehold.it/18x19");
+      }
+    }
+
+    &--cart {
+
+      span::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 21px;
+        height: 18px;
+        background-image: url("http://placehold.it/21x18");
+      }
+
+    }
+  }

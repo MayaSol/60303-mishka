@@ -1,0 +1,22 @@
+.btn-video {
+    width: 102px;
+    height: 78px;
+    border: 6px solid #ffffff;
+    border-radius: 20px;
+    background-color: #00d9bb;
+    box-sizing: border-box;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top:50%;
+      margin-top: -18px;
+      left: 50%;
+      margin-left: -15px;
+      border-left: 30px solid #ffffff;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+    }
+}

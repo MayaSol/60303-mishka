@@ -1,0 +1,23 @@
+html {
+  font-size: $html-size-base;
+}
+
+.page {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  min-width: $screen-mobile;
+}
+
+
+button,
+button:focus,
+button:active{
+    background:none;
+    outline:none;
+    padding:0;
+}
+button span{
+    position: relative;
+}

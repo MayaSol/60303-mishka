@@ -1,0 +1,36 @@
+.page-footer {
+  background-color: $color-grey-light;
+}
+
+.page-footer__socials {
+  min-height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid $color-grey;
+  @include container;
+}
+
+.page-footer__credentials {
+  min-height: 79px;
+  line-height: 79px;
+  font-size: 0;
+  text-align: center;
+  @include container;
+}
+
+.page-footer__credentials-inner {
+  display: inline-block;
+  vertical-align: middle;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: #000000;
+  }
+}
+
+.page-footer__credetials-logo {
+  margin-left: 30px;
+}

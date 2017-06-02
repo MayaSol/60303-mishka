@@ -1,0 +1,36 @@
+.page--index {
+
+  .page-main {
+    padding-top: 34px;
+  }
+
+  .page-main__product {
+    padding-bottom: 42px;
+    @include container;
+  }
+
+  .page-main__features {
+    margin-bottom: 61px;
+    padding-top: 34px;
+    @include container;
+  }
+
+  .page-main__reviews{
+    padding-bottom: 51px;
+    @include container;
+  }
+
+  .page-main__contacts {
+    padding-top: 44px;
+    @include container;
+  }
+
+}
+
+.page--catalog {
+
+  .page-main__products {
+    padding-top: 30px;
+    @include container;
+  }
+}

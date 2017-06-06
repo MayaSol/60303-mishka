@@ -9,3 +9,6 @@ css/*.css
 node_modules/
 Thumbs.db
 sass/test.scss
+sass/outlines.scss
+_design/
+preview/

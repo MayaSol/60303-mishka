@@ -1,20 +1,10 @@
 .main-nav__header {
-  height: 79px;
-}
-
-.main-nav__header-inner {
   position: relative;
-  @include container;
-  @include clearfix;
-}
-
-.main-nav__logo-wrapper {
-  width:86px;
   height: 79px;
-  margin-left:auto;
-  margin-right: auto;
   line-height: 79px;
   font-size: 0;
+  text-align: center;
+  @include container;
 }
 
 .main-nav__logo {
@@ -24,8 +14,9 @@
   width: 86px;
   line-height: 0;
   background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-
 
 .main-nav__toggle {
   display: none;
@@ -35,22 +26,15 @@
   box-shadow: none;
 }
 
-.main-nav__items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
 .main-nav--closed {
-  .main-nav__items {
+  .main-nav__link {
     position: absolute;
     display: none;
   }
 
   .main-nav__toggle {
-    display: block;
     position: absolute;
+    display: block;
     top:32px;
     right: 31px;
     width: 20px;
@@ -61,11 +45,24 @@
 }
 
 .main-nav--opened {
-  .main-nav__items {
+
+  .main-nav__link {
     position: absolute;
     display: block;
     width: 100%;
     z-index: 99;
+
+    &:nth-of-type(2){
+      margin-top: 80px;
+    }
+
+    &:nth-of-type(3){
+      margin-top: 2*80px;
+    }
+
+    &:nth-of-type(4){
+      margin-top: 3*80px;
+    }
   }
 
   .main-nav__toggle {
@@ -82,6 +79,7 @@
 
 .main-nav__link {
     display: block;
+    font-size: 0;
     min-height: 78px;
     line-height: 78px;
     color: #000000;
@@ -91,12 +89,15 @@
     border-top: 2px solid #e5e5e5;
 
     span {
+      display: inline-block;
       position: relative;
-      padding-left: 46px;
+      padding-left: 76px;
       font-size: 1.7rem;
       font-weight: 700;
       line-height: 2.4rem;
+      text-align: left;
       @include container;
+      box-sizing: border-box;
     }
 
     &--search {
@@ -104,11 +105,11 @@
       span::before {
         content: "";
         position: absolute;
-        left: 2px;
+        left: 32px;
         top: 2px;
         width: 18px;
-        height: 19px;
-        background-image: url("http://placehold.it/18x19");
+        height: 18px;
+        background-image: url("../img/icon-search.svg");
       }
     }
 
@@ -117,12 +118,179 @@
       span::before {
         content: "";
         position: absolute;
-        left: 2px;
+        left: 32px;
         top: 2px;
         width: 21px;
         height: 18px;
-        background-image: url("http://placehold.it/21x18");
+        background-image: url("../img/icon-cart.svg");
       }
 
     }
   }
+
+
+@media #{$tablet-widths} {
+
+  .main-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav__inner {
+    display: flex;
+    height: 88px;
+    @include container;
+  }
+
+  .main-nav__header {
+    width: auto;
+    magin: 0;
+    flex-basis: 180px;
+    flex-grow:1;
+    text-align: left;
+  }
+
+  .main-nav__logo {
+    width: 113px;
+    height: 46px;
+  }
+
+  .main-nav__link {
+    position: static;
+    display: flex;
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    background: initial;
+
+    span {
+      display: block;
+      width: auto;
+      margin: 0;
+      align-self: center;
+    }
+
+    &--form,
+    &--catalog {
+      display: none;
+    }
+  }
+
+  .main-nav__link--search {
+    padding: 0 32px;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+    span {
+      position: relative;
+      font-size: 0;
+      padding: 0;
+      width: 18px;
+      height: 19px;
+
+      &::before {
+        top:0;
+        left: 0;
+      }
+    }
+  }
+
+  .main-nav__link--cart {
+    flex-basis: 264px;
+    text-align: right;
+
+    span {
+      position: relative;
+      margin-left: auto;
+      padding-left: 52px;
+
+      &::before{
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+
+  .sub-nav {
+    display: block;
+    margin-bottom: auto;
+    padding-top: 25px;
+    }
+
+  .sub-nav__inner {
+    display: flex;
+    @include container;
+    justify-content: space-between;
+  }
+
+  .sub-nav__link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+    text-decoration: none;
+
+
+    &--new,
+    &--sale {
+      display: none;
+    }
+
+    &--catalog {
+      margin-right: 37px;
+    }
+
+    &--form {
+      margin-right: auto;
+    }
+  }
+
+}
+
+@media #{$desktop-widths} {
+
+  .main-nav__header {
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+  }
+
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+  }
+
+  .main-nav__link {
+
+    &--catalog,
+    &--form {
+
+      span {
+        padding: 0;
+    }
+  }
+
+    &--catalog {
+      display: flex;
+      padding-left: 0;
+      padding-right: 35px;
+      order: -2;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &--form {
+      display: flex;
+      margin-right: auto;
+      padding-left: 35px;
+      padding-right: 35px;
+      order: -1;
+    }
+
+    &--search {
+      margin-left: auto;
+    }
+  }
+}

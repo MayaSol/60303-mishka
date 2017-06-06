@@ -1,9 +1,3 @@
-.main-links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .main-links__link {
   display: block;
   min-height: 103px;
@@ -61,5 +55,23 @@
         background-image: url("../img/icon-toy.svg");
         opacity: 0.5;
     }
+  }
+}
+
+@media #{$tablet-widths} {
+
+  .main-links {
+    @include container;
+    display: flex;
+  }
+
+  .main-links__container {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-links__link {
+    flex-grow: 1;
+    padding-left: 36px;
   }
 }

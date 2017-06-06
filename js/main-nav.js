@@ -1,7 +1,7 @@
     var nav_toggle = document.querySelector(".main-nav__toggle");
     var main_nav = document.querySelector(".main-nav");
 
-   if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768) {
       main_nav.classList.add("main-nav--closed");
     }
 
@@ -27,14 +27,14 @@
 
         if (main_nav.classList.contains("main-nav--closed"))
         {
-           main_nav.classList.remove("main-nav--closed");
+          main_nav.classList.remove("main-nav--closed");
         }
 
         else
         {
           if (main_nav.classList.contains("main-nav--opened"))
           {
-           main_nav.classList.remove("main-nav--opened");
+            main_nav.classList.remove("main-nav--opened");
           }
         }
       }

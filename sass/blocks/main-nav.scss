@@ -1,9 +1,38 @@
+@mixin main-nav__sub-link {
+  display: flex;
+  padding-top: 25px;
+  background-color: rgba(255,255,255,0);
+
+  span {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+  }
+}
+
+@mixin main-nav__top-link {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255,255,255,1);
+
+  span {
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+  }
+}
+
 .main-nav__header {
   position: relative;
-  height: 79px;
+  min-height: 79px;
   line-height: 79px;
   font-size: 0;
   text-align: center;
+  background-color: #ffffff;
   @include container;
 }
 
@@ -26,57 +55,6 @@
   box-shadow: none;
 }
 
-.main-nav--closed {
-  .main-nav__link {
-    position: absolute;
-    display: none;
-  }
-
-  .main-nav__toggle {
-    position: absolute;
-    display: block;
-    top:32px;
-    right: 31px;
-    width: 20px;
-    height: 14px;
-    background-image: url("../img/icon-menu-open.svg");
-    z-index: 99;
-  }
-}
-
-.main-nav--opened {
-
-  .main-nav__link {
-    position: absolute;
-    display: block;
-    width: 100%;
-    z-index: 99;
-
-    &:nth-of-type(2){
-      margin-top: 80px;
-    }
-
-    &:nth-of-type(3){
-      margin-top: 2*80px;
-    }
-
-    &:nth-of-type(4){
-      margin-top: 3*80px;
-    }
-  }
-
-  .main-nav__toggle {
-    display: block;
-    position: absolute;
-    top: 29px;
-    right: 30px;
-    width: 21px;
-    height: 20px;
-    background-image: url("../img/icon-menu-close.svg");
-    z-index: 99;
-  }
-}
-
 .main-nav__link {
     display: block;
     font-size: 0;
@@ -90,6 +68,7 @@
 
     span {
       display: inline-block;
+      vertical-align: middle;
       position: relative;
       padding-left: 76px;
       font-size: 1.7rem;
@@ -124,70 +103,185 @@
         height: 18px;
         background-image: url("../img/icon-cart.svg");
       }
+    }
 
+    &--new,
+    &--sale,
+    &--delivery {
+      display: none;
     }
   }
+
+@media #{$mobile-widths-only} {
+
+  .main-nav--closed {
+    position: relative;
+    padding-top: 79px;
+
+    .main-nav__inner {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .main-nav__link {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      position: absolute;
+      display: block;
+      top:32px;
+      right: 31px;
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/icon-menu-open.svg");
+      z-index: 99;
+    }
+  }
+
+  .main-nav--opened {
+    position: relative;
+    padding-top: 79px;
+
+    .main-nav__inner {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .main-nav__link {
+      display: none;
+    }
+
+    .main-nav__link--catalog {
+      display: block;
+    }
+
+    .main-nav__link--form {
+      display: block;
+    }
+
+    .main-nav__link--search {
+      display: block;
+    }
+
+    .main-nav__link--cart {
+      display: block;
+    }
+
+    .main-nav__toggle {
+      display: block;
+      position: absolute;
+      top: 29px;
+      right: 30px;
+      width: 21px;
+      height: 20px;
+      background-image: url("../img/icon-menu-close.svg");
+      z-index: 3;
+    }
+
+    &--new,
+    &--sale,
+    &--delivery {
+      display: none;
+    }
+  }
+
+}
 
 
 @media #{$tablet-widths} {
 
   .main-nav {
-    background-color: #ffffff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 88px, rgba(255,255,255,0) 88px, rgba(255,255,255,0) 100%);
   }
 
   .main-nav__inner {
     display: flex;
-    height: 88px;
-    @include container;
+    flex-wrap: wrap;
+    min-height: 88px;
+    width: $screen-tablet;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .main-nav__header {
+    flex-basis: 300px;
+    flex-grow: 1;
     width: auto;
-    magin: 0;
-    flex-basis: 180px;
-    flex-grow:1;
+    height: auto;
+    margin: 0;
+    padding-left: 50px;
     text-align: left;
+    @include main-nav__top-link;
   }
 
   .main-nav__logo {
+    align-self: center;
     width: 113px;
     height: 46px;
   }
 
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav__link {
     position: static;
-    display: flex;
     width: auto;
     min-height: 0;
-    margin: 0;
-    padding: 0;
+    padding: 32px 0;
     line-height: inherit;
-    background: initial;
+    background: none;
+    border: none;
 
     span {
       display: block;
       width: auto;
       margin: 0;
-      align-self: center;
+      padding: 0;
     }
 
-    &--form,
-    &--catalog {
+    &--new,
+    &--sale {
       display: none;
     }
   }
 
+  .main-nav__link--catalog {
+    flex-basis: 190px;
+    margin-right: 37px;
+    padding-left: 50px;
+    order: 3;
+    box-sizing: border-box;
+    @include main-nav__sub-link;
+  }
+
+  .main-nav__link--form {
+    flex-basis: 140px;
+    order: 4;
+    box-sizing: border-box;
+    @include main-nav__sub-link;
+  }
+
   .main-nav__link--search {
-    padding: 0 32px;
+    flex-basis: 82px;
+    margin-left: auto;
     justify-content: center;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
+    order: 1;
+    box-sizing: border-box;
+    @include main-nav__top-link;
 
     span {
       position: relative;
-      font-size: 0;
-      padding: 0;
+      text-indent: -10000px;
       width: 18px;
       height: 19px;
 
@@ -198,8 +292,17 @@
     }
   }
 
+  .main-nav__user-section {
+    justify-content: flex-end;
+    flex-basis: 314px;
+    order: 2;
+    padding-right: 50px;
+    box-sizing: border-box;
+    @include main-nav__top-link;
+ }
+
   .main-nav__link--cart {
-    flex-basis: 264px;
+    padding-left: 31px;
     text-align: right;
 
     span {
@@ -214,37 +317,20 @@
     }
   }
 
-  .sub-nav {
-    display: block;
-    margin-bottom: auto;
-    padding-top: 25px;
-    }
+  .main-nav__link--delivery {
+    flex-basis: 240px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-left: 35px;
+    padding-right: 50px;
+    order: 5;
+    @include main-nav__sub-link;
 
-  .sub-nav__inner {
-    display: flex;
-    @include container;
-    justify-content: space-between;
-  }
-
-  .sub-nav__link {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 2.4rem;
-    color: #000000;
-    text-decoration: none;
-
-
-    &--new,
-    &--sale {
-      display: none;
-    }
-
-    &--catalog {
-      margin-right: 37px;
-    }
-
-    &--form {
-      margin-right: auto;
+    span{
+      text-align: right;
+      color: $color-grey-dark;
+      font-weight: 400;
     }
   }
 
@@ -252,10 +338,13 @@
 
 @media #{$desktop-widths} {
 
+  .main-nav__inner {
+    width: $screen-desktop;
+  }
+
   .main-nav__header {
-    position: absolute;
-    left: 50%;
-    margin-left: -75px;
+      flex-basis: 149px;
+      order: 3;
   }
 
   .main-nav__logo {
@@ -263,34 +352,59 @@
     height: 72px;
   }
 
-  .main-nav__link {
-
-    &--catalog,
-    &--form {
-
-      span {
-        padding: 0;
-    }
+  .main-nav__user-section {
+      flex-basis: 366px;
+      order: 5;
+      box-sizing: border-box;
   }
 
+  .main-nav__link {
+
     &--catalog {
-      display: flex;
-      padding-left: 0;
+      flex-basis: 284px;
+      margin-right: 0;
       padding-right: 35px;
-      order: -2;
+      order: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      @include main-nav__top-link;
     }
 
     &--form {
-      display: flex;
+      flex-basis: 221px;
       margin-right: auto;
       padding-left: 35px;
       padding-right: 35px;
-      order: -1;
+      order: 2;
+      box-sizing: border-box;
+      @include main-nav__top-link;
     }
 
     &--search {
-      margin-left: auto;
+      order: 4;
+    }
+
+    &--new {
+      flex-basis: 284px;
+      padding-left: 50px;
+      padding-right: 24px;
+      order: 6;
+      box-sizing: border-box;
+      @include main-nav__sub-link;
+    }
+
+    &--sale {
+      flex-basis: 233px;
+      padding-left: 35px;
+      padding-right: 35px;
+      box-sizing: border-box;
+      order: 7;
+      @include main-nav__sub-link;
+    }
+
+    &--delivery {
+      order:8;
     }
   }
+
 }

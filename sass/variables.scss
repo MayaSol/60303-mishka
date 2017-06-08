@@ -10,6 +10,8 @@ $container-desktop: 1050px;
 
 
 $screen-mobile: 320px;
+$screen-tablet: 778px;
+$screen-desktop: 1200px;
 
 
 $color-grey-dark: #444444;
@@ -21,5 +23,6 @@ $color-main: #63d1bb;
 $color-main-dark: #56c3b2;
 
 
+$mobile-widths-only: "(max-width: 767px)";
 $tablet-widths: "(min-width: 768px)";
 $desktop-widths: "(min-width: 1200px)";

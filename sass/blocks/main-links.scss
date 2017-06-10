@@ -8,6 +8,7 @@
 
 .main-links__container {
   display: block;
+  padding-right: 80px;
   @include container;
   font-size: 0;
 }
@@ -65,13 +66,16 @@
     display: flex;
   }
 
+  .main-links__link {
+    width: 50%;
+  }
+
   .main-links__container {
     width: auto;
     margin: 0;
   }
 
   .main-links__link {
-    flex-grow: 1;
     padding-left: 36px;
   }
 }

@@ -1,8 +1,5 @@
-.contacts {
-  padding-bottom: 39px;
-}
-
 .contacts__title {
+  margin-top: 0;
   margin-bottom: 42px;
   color: #000000;
   font-size: 1.8rem;
@@ -12,9 +9,11 @@
 
 .contacts__list {
   display: table;
+  width: 260px;
   padding: 0;
   margin-top: 0;
   margin-bottom: 42px;
+  //table-layout: fixed;
   list-style: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -28,16 +27,18 @@
 
 .contacts__type{
   display: table-cell;
-  height: 55px;
-  width: 30%;
+  min-height: 55px;
   text-align: left;
   vertical-align: top;
 }
 .contacts__value {
   display: table-cell;
-  height: 55px;
+  padding-left: 32px;
+  min-height: 55px;
   text-align: left;
   vertical-align: top;
+  word-wrap: break-word;
+  min-width: 0;
 }
 
 .contacts__map {
@@ -45,4 +46,129 @@
   width: 100%;
   height: 457px;
   background-color: $color-grey;
+}
+
+@media #{$tablet-widths} {
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 81px;
+    font-size: 4.3rem;
+    font-weight: 700;
+    line-height: 5rem;
+
+
+      &::after {
+      content: "";
+      display: block;
+      height: 81px;
+      width: 47px;
+      background-image: url("http://placehold.it/41x81");
+      }
+    }
+
+    .contacts__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 61px;
+    }
+
+    .contacts__item {
+      width: 300px;
+      display: flex;
+    }
+
+    .contacts__type,
+    .contacts__value {
+      width: auto;
+      height: auto;
+    }
+
+    .contacts__value {
+      padding-left: 26px;
+    }
+
+    .contacts__btn-write {
+      width: 230px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .contacts__map {
+      width: 100%;
+      margin-bottom: 55px;
+    }
+}
+
+
+@media #{$desktop-widths} {
+
+  .contacts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 457px;
+  }
+
+  .contacts__title {
+    justify-content: flex-start;
+    width: 408px;
+    margin-top: 62px;
+    margin-right: auto;
+
+    &::after {
+      order: -1;
+      margin-right: 71px;
+    }
+  }
+
+  .contacts__inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin-left: 118px;
+    margin-right: auto;
+  }
+
+  .contacts__list {
+    flex-wrap: wrap;
+    width: 300px;
+    margin-left: 118px;
+    margin-right: auto;
+  }
+
+  .contacts__item {
+    width: 100%;
+  }
+
+  .contacts__type,
+  .contacts__value {
+    min-height: 0;
+  }
+
+  .contacts__btn-write {
+    width: 230px;
+    margin-left: 118px;
+    margin-right: auto;
+    margin-top: auto;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 525px;
+    height: 457px;
+  }
+
 }

@@ -1,8 +1,3 @@
-.slider__btns {
-  padding: 13px 40px;
-  @include clearfix;
-}
-
 .slider__btn {
   width: 51px;
   height: 26px;
@@ -10,6 +5,7 @@
   border: none;
   box-shadow: none;
   background-color: transparent;
+  cursor: pointer;
 
   &--prev {
     float: left;

@@ -42,9 +42,6 @@
   height: 35px;
   width: 86px;
   line-height: 0;
-  background-image: url("../img/logo-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .main-nav__toggle {
@@ -75,6 +72,8 @@
       font-weight: 700;
       line-height: 2.4rem;
       text-align: left;
+      word-wrap: break-word;
+      min-width: 0;
       @include container;
       box-sizing: border-box;
     }
@@ -211,7 +210,6 @@
   }
 
   .main-nav__header {
-    flex-basis: 300px;
     flex-grow: 1;
     width: auto;
     height: auto;
@@ -234,6 +232,7 @@
   .main-nav__link {
     position: static;
     width: auto;
+    max-width: 100%;
     min-height: 0;
     padding: 32px 0;
     line-height: inherit;
@@ -254,7 +253,7 @@
   }
 
   .main-nav__link--catalog {
-    flex-basis: 190px;
+    width: 190px;
     margin-right: 37px;
     padding-left: 50px;
     order: 3;
@@ -263,14 +262,14 @@
   }
 
   .main-nav__link--form {
-    flex-basis: 140px;
+    width: 140px;
     order: 4;
     box-sizing: border-box;
     @include main-nav__sub-link;
   }
 
   .main-nav__link--search {
-    flex-basis: 82px;
+    width: 82px;
     margin-left: auto;
     justify-content: center;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -294,7 +293,7 @@
 
   .main-nav__user-section {
     justify-content: flex-end;
-    flex-basis: 314px;
+    width: 314px;
     order: 2;
     padding-right: 50px;
     box-sizing: border-box;
@@ -302,6 +301,7 @@
   }
 
   .main-nav__link--cart {
+    display: flex;
     padding-left: 31px;
     text-align: right;
 
@@ -310,7 +310,7 @@
       margin-left: auto;
       padding-left: 52px;
 
-      &::before{
+      &::before {
         top: 4px;
         left: 0;
       }
@@ -318,7 +318,7 @@
   }
 
   .main-nav__link--delivery {
-    flex-basis: 240px;
+    width: 240px;
     flex-grow: 1;
     justify-content: flex-end;
     margin-left: auto;
@@ -343,7 +343,7 @@
   }
 
   .main-nav__header {
-      flex-basis: 149px;
+      width: 149px;
       order: 3;
   }
 
@@ -353,7 +353,7 @@
   }
 
   .main-nav__user-section {
-      flex-basis: 366px;
+      width: 366px;
       order: 5;
       box-sizing: border-box;
   }
@@ -361,7 +361,7 @@
   .main-nav__link {
 
     &--catalog {
-      flex-basis: 284px;
+      width: 284px;
       margin-right: 0;
       padding-right: 35px;
       order: 1;
@@ -371,7 +371,7 @@
     }
 
     &--form {
-      flex-basis: 221px;
+      width: 221px;
       margin-right: auto;
       padding-left: 35px;
       padding-right: 35px;
@@ -385,7 +385,7 @@
     }
 
     &--new {
-      flex-basis: 284px;
+      width: 284px;
       padding-left: 50px;
       padding-right: 24px;
       order: 6;
@@ -394,7 +394,7 @@
     }
 
     &--sale {
-      flex-basis: 233px;
+      width: 233px;
       padding-left: 35px;
       padding-right: 35px;
       box-sizing: border-box;

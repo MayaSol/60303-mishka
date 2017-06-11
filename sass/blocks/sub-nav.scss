@@ -1,0 +1,61 @@
+.sub-nav {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+
+  .sub-nav {
+    display: block;
+    margin-bottom: auto;
+    padding-top: 25px;
+  }
+
+  .sub-nav__inner {
+    display: flex;
+    @include container;
+    justify-content: space-between;
+  }
+
+  .sub-nav__link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+    text-decoration: none;
+
+
+    &--new,
+    &--sale {
+      display: none;
+    }
+
+    &--catalog {
+      margin-right: 37px;
+    }
+
+    &--form {
+      margin-right: auto;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+
+  .sub-nav__link {
+
+    &--new {
+      display: block;
+      margin-right: 60px;
+    }
+
+    &--sale {
+      display: block;
+      margin-right: auto;
+    }
+
+    &--form,
+    &--catalog {
+      display: none;
+    }
+  }
+}

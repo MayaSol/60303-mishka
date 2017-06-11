@@ -2,6 +2,14 @@
   width: $container-mobile;
   margin-left: auto;
   margin-right: auto;
+
+  @media #{$tablet-widths} {
+    width: $container-tablet;
+  }
+
+  @media #{$desktop-widths} {
+    width: $container-desktop;
+  }
 }
 
 @mixin clearfix {

@@ -34,3 +34,38 @@
 .page-footer__credetials-logo {
   margin-left: 30px;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
+@media #{$tablet-widths} {
+
+  .page-footer__inner {
+    min-height: 143px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include container;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 102px;
+    height: 34px;
+    text-indent: -10000px;
+  }
+
+  .page-footer__socials {
+    height: auto;
+    width: auto;
+    margin: 0;
+    border: none;
+  }
+
+  .page-footer__credentials {
+    height: auto;
+    width: auto;
+    margin: 0;
+  }
+}

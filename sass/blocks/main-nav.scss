@@ -1,20 +1,39 @@
+@mixin main-nav__sub-link {
+  display: flex;
+  padding-top: 25px;
+  background-color: rgba(255,255,255,0);
+
+  span {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+  }
+}
+
+@mixin main-nav__top-link {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255,255,255,1);
+
+  span {
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+  }
+}
+
 .main-nav__header {
-  height: 79px;
-}
-
-.main-nav__header-inner {
   position: relative;
-  @include container;
-  @include clearfix;
-}
-
-.main-nav__logo-wrapper {
-  width:86px;
-  height: 79px;
-  margin-left:auto;
-  margin-right: auto;
+  min-height: 79px;
   line-height: 79px;
   font-size: 0;
+  text-align: center;
+  background-color: #ffffff;
+  @include container;
 }
 
 .main-nav__logo {
@@ -23,9 +42,7 @@
   height: 35px;
   width: 86px;
   line-height: 0;
-  background-image: url("../img/logo-mobile.svg");
 }
-
 
 .main-nav__toggle {
   display: none;
@@ -35,53 +52,9 @@
   box-shadow: none;
 }
 
-.main-nav__items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-.main-nav--closed {
-  .main-nav__items {
-    position: absolute;
-    display: none;
-  }
-
-  .main-nav__toggle {
-    display: block;
-    position: absolute;
-    top:32px;
-    right: 31px;
-    width: 20px;
-    height: 14px;
-    background-image: url("../img/icon-menu-open.svg");
-    z-index: 99;
-  }
-}
-
-.main-nav--opened {
-  .main-nav__items {
-    position: absolute;
-    display: block;
-    width: 100%;
-    z-index: 99;
-  }
-
-  .main-nav__toggle {
-    display: block;
-    position: absolute;
-    top: 29px;
-    right: 30px;
-    width: 21px;
-    height: 20px;
-    background-image: url("../img/icon-menu-close.svg");
-    z-index: 99;
-  }
-}
-
 .main-nav__link {
     display: block;
+    font-size: 0;
     min-height: 78px;
     line-height: 78px;
     color: #000000;
@@ -91,12 +64,18 @@
     border-top: 2px solid #e5e5e5;
 
     span {
+      display: inline-block;
+      vertical-align: middle;
       position: relative;
-      padding-left: 46px;
+      padding-left: 76px;
       font-size: 1.7rem;
       font-weight: 700;
       line-height: 2.4rem;
+      text-align: left;
+      word-wrap: break-word;
+      min-width: 0;
       @include container;
+      box-sizing: border-box;
     }
 
     &--search {
@@ -104,11 +83,11 @@
       span::before {
         content: "";
         position: absolute;
-        left: 2px;
+        left: 32px;
         top: 2px;
         width: 18px;
-        height: 19px;
-        background-image: url("http://placehold.it/18x19");
+        height: 18px;
+        background-image: url("../img/icon-search.svg");
       }
     }
 
@@ -117,12 +96,315 @@
       span::before {
         content: "";
         position: absolute;
-        left: 2px;
+        left: 32px;
         top: 2px;
         width: 21px;
         height: 18px;
-        background-image: url("http://placehold.it/21x18");
+        background-image: url("../img/icon-cart.svg");
       }
+    }
 
+    &--new,
+    &--sale,
+    &--delivery {
+      display: none;
     }
   }
+
+@media #{$mobile-widths-only} {
+
+  .main-nav--closed {
+    position: relative;
+    padding-top: 79px;
+
+    .main-nav__inner {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .main-nav__link {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      position: absolute;
+      display: block;
+      top:32px;
+      right: 31px;
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/icon-menu-open.svg");
+      z-index: 99;
+    }
+  }
+
+  .main-nav--opened {
+    position: relative;
+    padding-top: 79px;
+
+    .main-nav__inner {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .main-nav__link {
+      display: none;
+    }
+
+    .main-nav__link--catalog {
+      display: block;
+    }
+
+    .main-nav__link--form {
+      display: block;
+    }
+
+    .main-nav__link--search {
+      display: block;
+    }
+
+    .main-nav__link--cart {
+      display: block;
+    }
+
+    .main-nav__toggle {
+      display: block;
+      position: absolute;
+      top: 29px;
+      right: 30px;
+      width: 21px;
+      height: 20px;
+      background-image: url("../img/icon-menu-close.svg");
+      z-index: 3;
+    }
+
+    &--new,
+    &--sale,
+    &--delivery {
+      display: none;
+    }
+  }
+
+}
+
+
+@media #{$tablet-widths} {
+
+  .main-nav {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 88px, rgba(255,255,255,0) 88px, rgba(255,255,255,0) 100%);
+  }
+
+  .main-nav__inner {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 88px;
+    width: $screen-tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-nav__header {
+    flex-grow: 1;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding-left: 50px;
+    text-align: left;
+    @include main-nav__top-link;
+  }
+
+  .main-nav__logo {
+    align-self: center;
+    width: 113px;
+    height: 46px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__link {
+    position: static;
+    width: auto;
+    max-width: 100%;
+    min-height: 0;
+    padding: 32px 0;
+    line-height: inherit;
+    background: none;
+    border: none;
+
+    span {
+      display: block;
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--new,
+    &--sale {
+      display: none;
+    }
+  }
+
+  .main-nav__link--catalog {
+    width: 190px;
+    margin-right: 37px;
+    padding-left: 50px;
+    order: 3;
+    box-sizing: border-box;
+    @include main-nav__sub-link;
+  }
+
+  .main-nav__link--form {
+    width: 140px;
+    order: 4;
+    box-sizing: border-box;
+    @include main-nav__sub-link;
+  }
+
+  .main-nav__link--search {
+    width: 82px;
+    margin-left: auto;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    order: 1;
+    box-sizing: border-box;
+    @include main-nav__top-link;
+
+    span {
+      position: relative;
+      text-indent: -10000px;
+      width: 18px;
+      height: 19px;
+
+      &::before {
+        top:0;
+        left: 0;
+      }
+    }
+  }
+
+  .main-nav__user-section {
+    justify-content: flex-end;
+    width: 314px;
+    order: 2;
+    padding-right: 50px;
+    box-sizing: border-box;
+    @include main-nav__top-link;
+  }
+
+  .main-nav__link--cart {
+    display: flex;
+    padding-left: 31px;
+    text-align: right;
+
+    span {
+      position: relative;
+      margin-left: auto;
+      padding-left: 52px;
+
+      &::before {
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+
+  .main-nav__link--delivery {
+    width: 240px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-left: 35px;
+    padding-right: 50px;
+    order: 5;
+    @include main-nav__sub-link;
+
+    span{
+      text-align: right;
+      color: $color-grey-dark;
+      font-weight: 400;
+    }
+  }
+
+}
+
+@media #{$desktop-widths} {
+
+  .main-nav__inner {
+    width: $screen-desktop;
+  }
+
+  .main-nav__header {
+      width: 149px;
+      order: 3;
+  }
+
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+  }
+
+  .main-nav__user-section {
+      width: 366px;
+      order: 5;
+      box-sizing: border-box;
+  }
+
+  .main-nav__link {
+
+    &--catalog {
+      width: 284px;
+      margin-right: 0;
+      padding-right: 35px;
+      order: 1;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      @include main-nav__top-link;
+    }
+
+    &--form {
+      width: 221px;
+      margin-right: auto;
+      padding-left: 35px;
+      padding-right: 35px;
+      order: 2;
+      box-sizing: border-box;
+      @include main-nav__top-link;
+    }
+
+    &--search {
+      order: 4;
+    }
+
+    &--new {
+      width: 284px;
+      padding-left: 50px;
+      padding-right: 24px;
+      order: 6;
+      box-sizing: border-box;
+      @include main-nav__sub-link;
+    }
+
+    &--sale {
+      width: 233px;
+      padding-left: 35px;
+      padding-right: 35px;
+      box-sizing: border-box;
+      order: 7;
+      @include main-nav__sub-link;
+    }
+
+    &--delivery {
+      order:8;
+    }
+  }
+
+}

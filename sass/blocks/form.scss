@@ -33,7 +33,7 @@
   }
 }
 
-.section-form__title {
+.form__section-title {
   padding-right: 27px;
   margin-left: -10px;
   font-size: 1.7rem;
@@ -173,6 +173,7 @@
   &--area {
     width: 100%;
     height: 142px;
+    margin-bottom: 18px;
     padding: 17px;
     border: 2px solid $color-grey-dark;
     box-sizing: border-box;
@@ -186,4 +187,43 @@
   font-weight: 400;
   line-height: 1.6rem;
   color: $color-grey-dark;
+}
+
+@media #{$tablet-widths} {
+
+  .form {
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 3rem;
+
+    p {
+      margin-top: 80px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .form__section {
+    position: relative;
+    border: none;
+  }
+
+
+  .form__section-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+  }
+
+  .form__list {
+    display: flex;
+    margin-top: 0;
+    margin-left: 166px;
+
+    &--type {
+      flex-direction: column;
+    }
+  }
+
+
 }

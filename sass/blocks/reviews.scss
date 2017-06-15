@@ -128,16 +128,32 @@
 @media #{$desktop-widths} {
 
   .reviews {
-    padding-bottom: 102px;
+    padding-bottom: 0;
+    background: none;
   }
 
+  .reviews__wrapper {
+    position: relative;
+    padding-bottom: 102px;
+    padding-top: 80px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left, top;
+    background-size: auto 100%;
+    }
+
   .reviews__title {
+    margin-left: 175px;
     font-size: 5.3rem;
     font-weight: 700;
     line-height: 5.7rem;
   }
 
-  .reviews__wrapper {
-    padding-top: 80px;
+  .reviews__item {
+    margin-left: 175px;
+  }
+
+  .reviews__btns {
+    bottom: 9px + 102px;
   }
 }

@@ -54,9 +54,9 @@
       <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
 
-      <fieldset class="form__section  section-form">
-        <legend class="section-form__title">Тип</legend>
-        <ul class="form__list  form__list--radio">
+      <fieldset class="form__section">
+        <legend class="form__section-title">Тип</legend>
+        <ul class="form__list  form__list--radio  form__list--type">
           <li>
             <input class="form__field-radio" type="radio" name="type" value="interior" id="interior" checked>
             <label class="form__lbl  form__lbl--radio" for="interior">
@@ -73,8 +73,8 @@
       </fieldset>
 
 
-      <fieldset class="form__section  section-form">
-        <legend class="section-form__title">Цвет</legend>
+      <fieldset class="form__section">
+        <legend class="form__section-title">Цвет</legend>
         <ul class="form__list  form__list--checkbox">
             <li>
               <input class="form__field-checkbox" type="checkbox" name="white" id="white"  checked>
@@ -115,8 +115,8 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__section  section-form  form__section--name">
-        <legend class="section-form__title">ФИО</legend>
+      <fieldset class="form__section  form__section--name">
+        <legend class="form__section-title">ФИО</legend>
         <p>
           <label class="form__lbl  form__lbl--text" for="name">Имя:</label>
           <input class="form__field-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -131,22 +131,21 @@
         </p>
       </fieldset>
 
-      <fieldset class="form__section  section-form  form__section--phone">
-        <legend class="section-form__title">тел</legend>
+      <fieldset class="form__section  form__section--phone">
+        <legend class="form__section-title">тел</legend>
         <input class="form__field-text  form__field-text--tel" type="tel" name="user-phone" id="user-phone" placeholder="+7 ХХХ ХХ ХХ*" pattern="\+7 [0-9]{3} [0-9]{2} [0-9]{2}" required>
       </fieldset>
 
-      <fieldset class="form__section  section-form  form__section--email">
-        <legend class="section-form__title">E-mail</legend>
+      <fieldset class="form__section  form__section--email">
+        <legend class="form__section-title">E-mail</legend>
         <input class="form__field-text  form__field-text--email" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
       </fieldset>
 
-      <fieldset class="form__section  section-form  form__section--add">
-        <legend class="section-form__title">Доп</legend>
+      <fieldset class="form__section  form__section--add">
+        <legend class="form__section-title">Доп</legend>
         <textarea class="form__field-text  form__field-text--area" name="order-request" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <span class="form__legend">*Поля обязательны для заполнения</span>
       </fieldset>
-
-      <span class="form__legend">*Поля обязательны для заполнения</span>
 
       <button class="btn  form__btn-order" type="submit">
         <span>ОТПРАВИТЬ ЗАКАЗ</span>

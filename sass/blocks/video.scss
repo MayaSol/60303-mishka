@@ -1,18 +1,21 @@
 .video {
-  position: relative;
   margin-bottom: 58px;
   border: 1px solid #ececec;
   @include container;
 }
 
 .video__header {
-  min-height: 96px;
-  line-height: 96px;
+  min-height: 68px;
+  padding-top: 28px;
 
   h2 {
+    position: relative;
     display: inline-block;
-    margin-left: 91px;
-    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 34px;
+    margin-right: 34px;
+    padding-left: 57px;
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 2.4rem;
@@ -20,8 +23,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 35px;
-      left: 34px;
+      top: 7px;
+      left: 0;
     }
   }
 }
@@ -43,6 +46,12 @@
   position: relative;
   font-size: 0;
   line-height: 0;
+
+  video {
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .video__desc {
@@ -63,4 +72,108 @@
   left: 50%;
   margin-left: -51px;
   z-index: 99;
+}
+
+@media #{$tablet-widths} {
+
+  .video {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 63px;
+  }
+
+  .video__container {
+    order: -1;
+
+    video {
+      width: 668px;
+      height: 455px;
+      background-image: url("../img/video-tablet@1x.jpg");
+    }
+  }
+
+  .video__header {
+    min-height: 0;
+    padding: 0;
+    margin-top: 39px;
+    margin-bottom: 27px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+
+      &::before {
+        position: static;
+        margin-right: 33px;
+      }
+    }
+  }
+
+  .video__desc {
+    width: auto;
+    margin-left: 42px;
+    margin-right: 42px;
+    padding-bottom: 46px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+
+    p:last-child {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+
+  .video__wrapper {
+    position: relative;
+    @include container;
+  }
+
+  .video {
+    width: auto;
+    margin-right: 0;
+    margin-left: 682px;
+    min-height: 455px;
+    box-sizing: border-box;
+  }
+
+  .video__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 682px;
+    height: 455px;
+
+    video {
+      width: 682px;
+    }
+  }
+
+  .video__header {
+    margin-left: 78px;
+
+    h2 {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+
+      &::before {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .video__desc {
+    margin-left: 78px;
+
+    a {
+      margin-top: 35px;
+    }
+  }
 }

@@ -343,8 +343,9 @@
   }
 
   .main-nav__header {
-      width: 149px;
-      order: 3;
+    padding-left: 0;
+    width: 149px;
+    order: 3;
   }
 
   .main-nav__logo {
@@ -371,7 +372,7 @@
     }
 
     &--form {
-      width: 221px;
+      width: 254px;
       margin-right: auto;
       padding-left: 35px;
       padding-right: 35px;

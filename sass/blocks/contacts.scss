@@ -1,6 +1,6 @@
 .contacts__title {
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 34px;
   color: #000000;
   font-size: 1.8rem;
   font-weight: 700;
@@ -12,8 +12,8 @@
   width: 260px;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 42px;
-  //table-layout: fixed;
+  margin-bottom: 38px;
+  table-layout: fixed;
   list-style: none;
   font-size: 1.5rem;
   font-weight: 400;
@@ -25,15 +25,18 @@
   display: table-row;
 }
 
-.contacts__type{
+.contacts__type {
   display: table-cell;
   min-height: 55px;
+  width: 63px;
+  margin-bottom: 30px;
   text-align: left;
   vertical-align: top;
+  border-bottom: 30px solid transparent;
+  border-right: 15px solid transparent;
 }
 .contacts__value {
   display: table-cell;
-  padding-left: 32px;
   min-height: 55px;
   text-align: left;
   vertical-align: top;
@@ -79,14 +82,23 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       margin-bottom: 61px;
+      font-size: 1.7rem;
     }
 
     .contacts__item {
       width: 300px;
-      display: flex;
-      justify-content: space-between;
+//      display: flex;
+//      justify-content: space-between;
+      margin-right: 35px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    .contacts__type {
+      border-right-width: 26px;
     }
 
     .contacts__type,
@@ -96,7 +108,7 @@
     }
 
     .contacts__value {
-      padding-left: 26px;
+//      padding-left: 26px;
     }
 
     .contacts__btn-write {
@@ -107,7 +119,7 @@
 
     .contacts__map {
       width: 100%;
-      margin-bottom: 55px;
+      margin-bottom: 50px;
     }
 }
 
@@ -124,13 +136,16 @@
   .contacts__title {
     justify-content: flex-start;
     width: 408px;
-    margin-top: 62px;
+    margin-top: 60px;
     margin-right: auto;
     margin-left: 63px;
+    font-size: 5.3rem;
+    font-weight: 700;
+    line-height: 5.7rem;
 
     &::after {
       order: -1;
-      margin-right: 64px;
+      margin-right: 60px;
     }
   }
 
@@ -152,7 +167,7 @@
 
   .contacts__btn-write {
     width: 230px;
-    margin-left: 118px;
+    margin-left: 175px;
     margin-right: auto;
     margin-top: auto;
   }

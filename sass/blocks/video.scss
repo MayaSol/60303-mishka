@@ -1,12 +1,12 @@
 .video {
-  margin-bottom: 58px;
+  margin-bottom: 57px;
   border: 1px solid #ececec;
   @include container;
 }
 
 .video__header {
-  min-height: 68px;
-  padding-top: 28px;
+  min-height: 72px;
+  padding-top: 23px;
 
   h2 {
     position: relative;
@@ -58,11 +58,16 @@
   width: 192px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 15px;
   padding-bottom: 33px;
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 2.4rem;
   color: $color-grey-dark;
+
+  p:last-of-type {
+    padding-bottom: 35px;
+  }
 }
 
 .video__btn {
@@ -95,13 +100,13 @@
   .video__header {
     min-height: 0;
     padding: 0;
-    margin-top: 39px;
-    margin-bottom: 27px;
+    margin-top: 35px;
+    margin-bottom: 20px;
 
     h2 {
       display: flex;
       align-items: center;
-      padding-left: 0;
+      padding-left: 7px;
       font-size: 2rem;
       font-weight: 700;
       line-height: 2.4rem;
@@ -118,12 +123,13 @@
     margin-left: 42px;
     margin-right: 42px;
     padding-bottom: 46px;
+    padding-top: 0;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 3rem;
 
-    p:last-child {
-      margin-bottom: 27px;
+    p:last-of-type {
+      padding-bottom: 20px;
     }
   }
 }
@@ -137,6 +143,7 @@
 
   .video {
     width: auto;
+    margin-bottom: 105px;
     margin-right: 0;
     margin-left: 682px;
     min-height: 455px;
@@ -157,23 +164,30 @@
 
   .video__header {
     margin-left: 78px;
+    margin-top: 45px;
+    margin-right: 57px;
 
     h2 {
       flex-direction: column;
       align-items: flex-start;
       margin-left: 0;
+      padding-left: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.4rem;
 
       &::before {
-        margin-bottom: 30px;
+        margin-bottom: 27px;
       }
     }
   }
 
   .video__desc {
     margin-left: 78px;
+    margin-right: 57px;
 
     a {
-      margin-top: 35px;
+      margin-top: 25px;
     }
   }
 }

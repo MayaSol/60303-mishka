@@ -1,6 +1,6 @@
 @mixin main-nav__sub-link {
   display: flex;
-  padding-top: 25px;
+  padding-top: 17px;
   background-color: rgba(255,255,255,0);
 
   span {
@@ -133,7 +133,7 @@
       position: absolute;
       display: block;
       top:32px;
-      right: 31px;
+      right: 0;
       width: 20px;
       height: 14px;
       background-image: url("../img/icon-menu-open.svg");
@@ -176,8 +176,8 @@
     .main-nav__toggle {
       display: block;
       position: absolute;
-      top: 29px;
-      right: 30px;
+      top:32px;
+      right: 0;
       width: 21px;
       height: 20px;
       background-image: url("../img/icon-menu-close.svg");
@@ -238,6 +238,7 @@
     line-height: inherit;
     background: none;
     border: none;
+    flex-shrink: 0;
 
     span {
       display: block;
@@ -254,7 +255,7 @@
 
   .main-nav__link--catalog {
     width: 190px;
-    margin-right: 37px;
+    margin-right: 30px;
     padding-left: 50px;
     order: 3;
     box-sizing: border-box;
@@ -275,7 +276,6 @@
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     order: 1;
-    box-sizing: border-box;
     @include main-nav__top-link;
 
     span {
@@ -354,7 +354,7 @@
   }
 
   .main-nav__user-section {
-      width: 366px;
+      width: 314px;
       order: 5;
       box-sizing: border-box;
   }
@@ -362,9 +362,10 @@
   .main-nav__link {
 
     &--catalog {
-      width: 284px;
+      width: 234px;
       margin-right: 0;
       padding-right: 35px;
+      padding-bottom: 20px;
       order: 1;
       border-right: 1px solid rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
@@ -376,6 +377,7 @@
       margin-right: auto;
       padding-left: 35px;
       padding-right: 35px;
+      padding-bottom: 20px;
       order: 2;
       box-sizing: border-box;
       @include main-nav__top-link;
@@ -386,7 +388,7 @@
     }
 
     &--new {
-      width: 284px;
+      width: 234px;
       padding-left: 50px;
       padding-right: 24px;
       order: 6;

@@ -1,0 +1,39 @@
+.size-list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 31px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-list__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 2px solid $color-grey-dark;
+  box-sizing: border-box;
+  color: $color-grey-dark;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.size-list__input {
+  display: none;
+}
+
+.size-list__input:checked ~ label {
+  border-color: $color-main;
+}
+
+@media #{$tablet-widths} {
+
+  .size-list__btn {
+    width: 112px;
+  }
+}

@@ -59,7 +59,7 @@
   .page-footer__socials {
     height: auto;
     width: auto;
-    margin: 0;
+    margin-left: 159px;
     border: none;
   }
 
@@ -67,5 +67,12 @@
     height: auto;
     width: auto;
     margin: 0;
+  }
+}
+
+@media #{$desktop-widths} {
+
+  .page-footer__socials {
+    margin-left: 350px;
   }
 }

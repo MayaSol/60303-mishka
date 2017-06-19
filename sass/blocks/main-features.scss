@@ -14,7 +14,7 @@
 
 .main-features__item {
   position: relative;
-  padding-top: 85px;
+  padding-top: 83px;
   color: #000000;
   font-size: 1.7rem;
   font-weight: 700;
@@ -23,7 +23,7 @@
   &--materials {
     background-image: url("../img/icon-feature-1.svg");
     background-repeat: no-repeat;
-    background-position: top 25px left 8px;
+    background-position: top 30px left 8px;
   }
 
   &--price {
@@ -41,26 +41,26 @@
   &--manual {
     background-image: url("../img/icon-feature-4.svg");
     background-repeat: no-repeat;
-    background-position: top 25px left 8px;
+    background-position: top 31px left 2px;
   }
 
   &--domestic {
     background-image: url("../img/icon-feature-5.svg");
     background-repeat: no-repeat;
-    background-position: top 25px left 8px;
+    background-position: top 33px left 0;
   }
 
   &--pack {
     background-image: url("../img/icon-feature-6.svg");
     background-repeat: no-repeat;
-    background-position: top 25px left 8px;
+    background-position: top 31px left 3px;
   }
 }
 
 @media #{$tablet-widths} {
 
   .main-features__title {
-    margin-bottom: 19px;
+    margin-bottom: 0;
     font-size: 4.3rem;
     font-weight: 700;
     line-height: 5rem;
@@ -69,19 +69,24 @@
   .main-features__list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    margin-top: -7px;
   }
 
   .main-features__item {
-    flex-basis: 300px;
+    width: 300px;
     margin-right: 34px;
-    margin-top: 27px;
+    margin-top: 28px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.2rem;
   }
 }
 
 @media #{$desktop-widths} {
 
   .main-features__title {
-    margin-bottom: -10px;
     font-size: 5.3rem;
     font-weight: 700;
     line-height: 5.7rem;
@@ -92,14 +97,14 @@
   }
 
   .main-features__list {
-    flex-direction: column;
-    flex-wrap: wrap;
     height: 480px;
+    margin-top: -10px;
+    align-content: flex-start;
   }
 
   .main-features__item {
     flex-basis: auto;
-    width: 300px;
+    margin-right: 50px;
     font-size: 20px;
     font-weight: 700;
     line-height: 22px;

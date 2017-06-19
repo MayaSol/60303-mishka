@@ -1,13 +1,13 @@
 .page--index {
 
   .page-main {
-    padding-top: 34px;
+    padding-top: 29px;
 
     @media #{$tablet-widths} {
-      padding-top: 55px;
+      padding-top: 44px;
     }
     @media #{$desktop-widths} {
-      padding-top: 71px;
+      padding-top: 70px;
     }
   }
 
@@ -24,17 +24,17 @@
   }
 
   .page-main__features {
-    margin-top: 34px;
-    margin-bottom: 61px;
+    margin-top: 27px;
+    margin-bottom: 55px;
     @include container;
 
     @media #{$tablet-widths} {
-      margin-top: 59px;
-      margin-bottom: 82px;
+      margin-top: 50px;
+      margin-bottom: 48px;
     }
     @media #{$desktop-widths} {
-      margin-top: 70px;
-      margin-bottom: 85px;
+      margin-top: 60px;
+      margin-bottom: 77px;
     }
   }
 
@@ -47,15 +47,16 @@
   }
 
   .page-main__contacts {
-    margin-top: 44px;
+    margin-top: 35px;
     margin-bottom: 39px;
     @include container;
 
     @media #{$tablet-widths} {
-      margin-top: 70px;
+      margin-top: 42px;
       margin-bottom: 57px;
     }
-    @media #{$tablet-widths} {
+    @media #{$desktop-widths} {
+      margin-top: 66px;
       margin-bottom: 105px;
     }
   }
@@ -67,12 +68,26 @@
   .page-main__products {
     padding-top: 30px;
     @include container;
+
+    @media #{$tablet-widths} {
+      padding-top: 79px;
+    }
+
+    @media #{$desktop-widths} {
+      padding-top: 128px;
+    }
   }
 }
 
 .page-main__section-wrapper {
-  padding-top: 17px;
+  padding-top: 7px;
   background-image: url("../img/wave.png");
   background-repeat: repeat-x;
   background-position: top left;
+  @media #{$tablet-widths} {
+    padding-top: 17px;
+  }
+  @media #{$desktop-widths} {
+    padding-top: 23px;
+  }
 }

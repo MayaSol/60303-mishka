@@ -15,7 +15,7 @@
 }
 
 .item-products__desc {
-  padding-top: 31px;
+  padding-top: 20px;
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 3rem;
@@ -28,14 +28,6 @@
   h1 {
     margin-top: 0;
     margin-bottom: 6px;
-
-  a {
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 2.4rem;
-    color: #000000;
-    text-decoration: none;
-    }
   }
 
   p {
@@ -45,8 +37,19 @@
     }
 
     &:last-of-type {
-      margin-bottom: 27px;
+      margin-bottom: 18px;
     }
+  }
+}
+
+.item-products__title {
+
+  a {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    color: #000000;
+    text-decoration: none;
   }
 }
 
@@ -68,6 +71,7 @@
   display: table-cell;
   text-align: left;
   vertical-align: middle;
+  padding-bottom: 5px;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2.4rem;
@@ -76,6 +80,7 @@
 
 .item-products__btn-cart {
   display: table-cell;
+  padding-bottom: 10px;
   font-size: 0;
   line-height: 0;
   text-align: right;
@@ -103,9 +108,9 @@
   .item-products__desc {
     flex-grow: 1;
     display: flex;
-    padding-top: 28px;
+    padding-top: 17px;
     padding-right: 32px;
-    padding-left: 28px;
+    padding-left: 26px;
     min-height: 195px;
   }
 
@@ -123,13 +128,16 @@
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 3rem;
+}
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 2.4rem;
+.item-products__title {
+
+  a {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
     }
-  }
+}
 
   .item-products__container {
     margin-top: auto;
@@ -137,6 +145,7 @@
   }
 
   .item-products__price {
+    padding-left: 5px;
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 2.4rem;
@@ -164,7 +173,24 @@
     height: 462px;
   }
 
+  .item-products__desc {
+    min-height: 178px;
+    width: 316px;
+    box-sizing: border-box;
+  }
+
   .item-products__inner {
     flex-grow: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .item-products__title {
+    a{
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+    }
   }
 }

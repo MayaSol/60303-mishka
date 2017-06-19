@@ -18,4 +18,3 @@
             main_nav.classList.add("main-nav--closed");
         }
     });
-

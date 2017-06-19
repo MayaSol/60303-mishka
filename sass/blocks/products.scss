@@ -131,6 +131,8 @@
 }
 
 .item-products__title {
+  line-height: 2.4rem;
+
 
   a {
     font-size: 2rem;
@@ -174,9 +176,18 @@
   }
 
   .item-products__desc {
+    padding-top: 24px;
     min-height: 178px;
     width: 316px;
     box-sizing: border-box;
+  }
+
+  .item-products__text {
+    line-height: 2rem;
+
+    h1 {
+      margin-bottom: 10px;
+    }
   }
 
   .item-products__inner {
@@ -187,10 +198,12 @@
   }
 
   .item-products__title {
-    a{
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 2.4rem;
-    }
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+
+  .item-products__price {
+    padding-left: 0;
   }
 }

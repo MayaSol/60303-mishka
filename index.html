@@ -7,62 +7,64 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page  page--index">
-    <header class="page-header">
+    <div class="page-header__wrapper">
+      <header class="page-header">
 
-      <nav class="main-nav">
-        <div class="main-nav__inner">
-          <div class="main-nav__header">
-            <a class="logo  main-nav__logo">Mishka</a>
-            <a class="main-nav__toggle"></a>
-          </div>
-          <a class="main-nav__link  main-nav__link--catalog" href="catalog.html">
-            <span>Каталог товаров</span>
-          </a>
-          <a class="main-nav__link  main-nav__link--form" href="form.html">
-            <span>Вязание на заказ</span>
-          </a>
-          <a class="main-nav__link  main-nav__link--search" href="#">
-            <span>Поиск по сайту</span>
-          </a>
-          <div class="main-nav__user-section">
-            <a class="main-nav__link  main-nav__link--cart" href="#">
-              <span>Корзина: пока пуста</span>
+        <nav class="main-nav">
+          <div class="main-nav__inner">
+            <div class="main-nav__header">
+              <a class="logo  main-nav__logo">Mishka</a>
+              <a class="main-nav__toggle"></a>
+            </div>
+            <a class="main-nav__link  main-nav__link--catalog" href="catalog.html">
+              <span>Каталог товаров</span>
+            </a>
+            <a class="main-nav__link  main-nav__link--form" href="form.html">
+              <span>Вязание на заказ</span>
+            </a>
+            <a class="main-nav__link  main-nav__link--search" href="#">
+              <span>Поиск по сайту</span>
+            </a>
+            <div class="main-nav__user-section">
+              <a class="main-nav__link  main-nav__link--cart" href="#">
+                <span>Корзина: пока пуста</span>
+              </a>
+            </div>
+            <a class="main-nav__link  main-nav__link--new" href="new.html">
+              <span>Новые поступления</span>
+            </a>
+            <a class="main-nav__link  main-nav__link--sale" href="sale.html">
+              <span>Распродажа</span>
+            </a>
+            <a class="main-nav__link  main-nav__link--delivery">
+              <span>Бесплатная доставка по России</span>
             </a>
           </div>
-          <a class="main-nav__link  main-nav__link--new" href="new.html">
-            <span>Новые поступления</span>
+        </nav>
+
+        <div class="page-header__title-wrapper">
+          <h1 class="page-header__title">Милые штуки ручной <br>работы для дома</h1>
+        </div>
+
+        <div class="main-links">
+          <a class="main-links__link  main-links__link--interior" href="interior.html">
+            <span class="main-links__container">
+              <span class="main-links__text">
+                Предметы <br>интерьера
+              </span>
+            </span>
           </a>
-          <a class="main-nav__link  main-nav__link--sale" href="sale.html">
-            <span>Распродажа</span>
-          </a>
-          <a class="main-nav__link  main-nav__link--delivery">
-            <span>Бесплатная доставка по России</span>
+          <a class="main-links__link  main-links__link--toys" href="toys.html">
+            <span class="main-links__container">
+              <span class="main-links__text">
+                Детские <br>игрушки
+              </span>
+            </span>
           </a>
         </div>
-      </nav>
 
-      <div class="page-header__title-wrapper">
-        <h1 class="page-header__title">Милые штуки ручной <br>работы для дома </h1>
-      </div>
-
-      <div class="main-links">
-        <a class="main-links__link  main-links__link--interior" href="interior.html">
-          <span class="main-links__container">
-            <span class="main-links__text">
-              Предметы <br>интерьера
-            </span>
-          </span>
-        </a>
-        <a class="main-links__link  main-links__link--toys" href="toys.html">
-          <span class="main-links__container">
-            <span class="main-links__text">
-              Детские <br>игрушки
-            </span>
-          </span>
-        </a>
-      </div>
-
-    </header>
+      </header>
+    </div>
 
 
     <main class="page-main">
@@ -101,30 +103,32 @@
       </article>
 
       <div class="page-main__section-wrapper">
-        <article class="main-features  page-main__features">
-          <h2 class="main-features__title">Коротко о нас:</h2>
+        <div class="page-main__features">
+          <article class="main-features">
+            <h2 class="main-features__title">Коротко о нас:</h2>
 
-          <ul class="main-features__list">
-            <li class="main-features__item  main-features__item--materials">
-              Экологически чистые материалы
-            </li>
-            <li class="main-features__item  main-features__item--price">
-              Скандинавский стиль по российской цене
-            </li>
-            <li class="main-features__item  main-features__item--likes">
-              Увеличивает лайки на фотографиях
-            </li>
-            <li class="main-features__item  main-features__item--manual">
-              Связано вручную с любовью и умилением
-            </li>
-            <li class="main-features__item  main-features__item--domestic">
-              Поддержка отечественного производителя
-            </li>
-            <li class="main-features__item  main-features__item--pack">
-              Поставляется в подарочной упаковке
-            </li>
-          </ul>
-        </article>
+            <ul class="main-features__list">
+              <li class="main-features__item  main-features__item--materials">
+                Экологически <br>чистые материалы
+              </li>
+              <li class="main-features__item  main-features__item--price">
+                Скандинавский стиль <br>по российской цене
+              </li>
+              <li class="main-features__item  main-features__item--likes">
+                Увеличивает лайки <br>на фотографиях
+              </li>
+              <li class="main-features__item  main-features__item--manual">
+                Связано вручную с любовью и умилением
+              </li>
+              <li class="main-features__item  main-features__item--domestic">
+                Поддержка отечественного производителя
+              </li>
+              <li class="main-features__item  main-features__item--pack">
+                Поставляется в <br>подарочной упаковке
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <section class="reviews  page-main__reviews">
@@ -155,18 +159,18 @@
         <section class="contacts  page-main__contacts">
           <h2 class="contacts__title">Контакты</h2>
             <ul class="contacts__list">
-            <li class="contacts__item">
-              <span class="contacts__type">e-mail:</span>
-              <span class="contacts__value">
-                <a class="link-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru1</a>
-              </span>
-            </li>
-            <li class="contacts__item">
-              <span class="contacts__type">адрес:</span>
-              <span class="contacts__value">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101
-              </span>
-            </li>
-          </ul>
+              <li class="contacts__item">
+                <span class="contacts__type">e-mail:</span>
+                <span class="contacts__value">
+                  <a class="link-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                </span>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__type">адрес:</span>
+                <span class="contacts__value">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101
+                </span>
+              </li>
+            </ul>
 
           <div class="contacts__map  map"></div>
 
@@ -181,19 +185,18 @@
     <footer  class="page-footer">
       <div class="page-footer__inner">
         <a class="page-footer__logo  logo">Mishka</a>
-        <div class="page-footer__socials">
-            <ul class="socials">
-              <li class="socials__item">
-                <a class="social-link  social-link--in" href="https://www.instagram.com/">Instagram</a>
-              </li>
-              <li class="socials__item">
-                <a class="social-link  social-link--fb" href="https://www.facebook.com/">Facebook</a>
-              </li>
-              <li class="socials__item">
-                <a class="social-link  social-link--tw" href="https://twitter.com/">Twitter</a>
-              </li>
-            </ul>
-        </div>
+
+        <ul class="socials  page-footer__socials">
+          <li class="socials__item">
+            <a class="social-link  social-link--in" href="https://www.instagram.com/">Instagram</a>
+          </li>
+          <li class="socials__item">
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/">Facebook</a>
+          </li>
+          <li class="socials__item">
+            <a class="social-link  social-link--tw" href="https://twitter.com/">Twitter</a>
+          </li>
+        </ul>
 
         <div class="page-footer__credentials">
           <div class="page-footer__credentials-inner">
@@ -206,7 +209,38 @@
       </div>
     </footer>
 
+<article class="modal-order">
+  <div class="modal-order__overlay">
+    <div class='modal-order__inner'>
+      <div class="modal-order__container">
+        <h2 class="modal-order__title">
+          Добавить <br>в корзину
+        </h2>
+        <p class="modal-order__text">
+          Выберите размер:
+        </p>
+        <ul class="size-list">
+          <li>
+            <input class="size-list__input" type="radio" name="size" value="s" id="size-s" checked>
+            <label class="size-list__btn" for="size-s">S</label>
+          </li>
+          <li>
+            <input class="size-list__input" type="radio" name="size" value="m" id="size-m">
+            <label class="size-list__btn" for="size-m">M</label>
+          </li>
+          <li>
+            <input class="size-list__input" type="radio" name="size" value="l" id="size-l">
+            <label class="size-list__btn" for="size-l">L</label>
+          </li>
+        </ul>
+        <a class="btn btn--modal">Добавить</a>
+      </div>
+    </div>
+  </div>
+</article>
+
     <script src="js/main-nav.js"></script>
+    <script src="js/modal-order.js"></script>
 
   </body>
 </html>

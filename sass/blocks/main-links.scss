@@ -1,7 +1,7 @@
 .main-links__link {
   display: block;
-  min-height: 103px;
-  line-height: 103px;
+  min-height: 119px;
+  line-height: 119px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -10,6 +10,7 @@
   display: block;
   padding-right: 80px;
   @include container;
+  box-sizing: border-box;
   font-size: 0;
 }
 
@@ -22,41 +23,41 @@
 }
 
 .main-links__link--interior {
-    background-color: $color-main;
+  background-color: $color-main;
 
-    .main-links__container {
-      position: relative;
+  .main-links__container {
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        right: 36px;
-        top: 23px;
-        width: 41px;
-        height: 62px;
-        background-image: url("../img/icon-interior.svg");
-        opacity: 0.5;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 23px;
+      width: 41px;
+      height: 62px;
+      background-image: url("../img/icon-interior.svg");
+      opacity: 0.5;
     }
   }
+}
 
 .main-links__link--toys {
-    background-color: $color-main-dark;
+  background-color: $color-main-dark;
 
-    .main-links__container {
-      position: relative;
+  .main-links__container {
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        right: 26px;
-        top: 20px;
-        width: 61px;
-        height: 61px;
-        background-image: url("../img/icon-toy.svg");
-        opacity: 0.5;
-    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3px;
+      top: 20px;
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/icon-toy.svg");
+      opacity: 0.5;
   }
+}
 }
 
 @media #{$tablet-widths} {
@@ -68,14 +69,41 @@
 
   .main-links__link {
     width: 50%;
+    padding-left: 36px;
   }
 
   .main-links__container {
     width: auto;
     margin: 0;
+
   }
 
-  .main-links__link {
-    padding-left: 36px;
+.main-links__link--interior {
+
+  .main-links__container {
+
+    &::after {
+      right: 36px;
+      top: 30px;
+    }
+  }
+}
+
+.main-links__link--toys {
+
+  .main-links__container {
+
+    &::after {
+      right: 33px;
+      top: 31px;
+  }
+  }
+}
+
+
+  .main-links__text {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
   }
 }

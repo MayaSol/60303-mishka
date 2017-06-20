@@ -52,7 +52,6 @@
   <main class="page-main">
 
     <section class="products  page-main__products">
-
       <div class="products__list">
 
         <article class="products__item  item-products">
@@ -63,7 +62,9 @@
           <div class="item-products__desc">
             <div class="item-products__inner">
               <div class="item-products__text">
-                <h3><a href="hare.html">Зайчик-попрыгайчик</a></h3>
+                <h1 class="item-products__title">
+                  <a href="hare.html">Зайчик-попрыгайчик</a>
+                </h1>
                 <p>Рост 30 см, вес 200 г</p>
               </div>
               <div class="item-products__container">
@@ -84,7 +85,9 @@
           <div class="item-products__desc">
             <div class="item-products__inner">
               <div class="item-products__text">
-                <h3><a href="basket-linen.html">Корзинка для белья</a></h3>
+                <h1 class="item-products__title">
+                  <a href="basket-linen.html">Корзинка для белья</a>
+                </h1>
                 <p>Диаметр 15 см, высота 10 см</p>
               </div>
               <div class="item-products__container">
@@ -105,7 +108,9 @@
           <div class="item-products__desc">
             <div class="item-products__inner">
               <div class="item-products__text">
-                <h3><a href="basket-toy-big.html">Большая корзинка для игрушек</a></h3>
+                <h1 class="item-products__title">
+                  <a href="basket-toy-big.html">Большая корзинка <br>для игрушек</a>
+                </h1>
                 <p>Диаметр 30 см, высота 30 см</p>
               </div>
               <div class="item-products__container">
@@ -117,53 +122,57 @@
             </div>
           </div>
         </article>
+
       </div>
     </section>
 
-    <section class="video  video--process">
-      <div class="video__header">
-        <h2>Процесс производства</h2>
-      </div>
-      <div class="video__container">
-        <video width="260" height="150" poster="img/video-mobile@1x.jpg">
-        </video>
-        <a href="#" class="video__btn  btn-video"></a>
-      </div>
-      <div class="video__desc">
-        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a href="#" class="btn">Сделать заказ</a>
-      </div>
-    </section>
+    <div class="video__wrapper">
+      <section class="video  video--process">
+        <div class="video__header">
+          <h2>Процесс производства</h2>
+        </div>
+        <div class="video__container">
+          <video width="260" height="150" preload="none">
+            <source src="https://ia600209.us.archive.org/4/items/placeholder-videos-2016/320x180.mp4" type="video/mp4">
+          </video>
+          <a href="#" class="video__btn  btn-video"></a>
+        </div>
+        <div class="video__desc">
+          <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a href="#" class="btn">Сделать заказ</a>
+        </div>
+      </section>
+    </div>
 
   </main>
 
 
-  <footer  class="page-footer">
-    <div class="page-footer__socials">
-      <ul class="socials">
-        <li class="socials__item">
-          <a class="social-link  social-link--in" href="https://www.instagram.com/">Instagram</a>
-        </li>
-        <li class="socials__item">
-          <a class="social-link  social-link--fb" href="https://www.facebook.com/">Facebook</a>
-        </li>
-        <li class="socials__item">
-          <a class="social-link  social-link--tw" href="https://twitter.com/">
-            Twitter
-          </a>
-        </li>
-      </ul>
-    </div>
+    <footer  class="page-footer">
+      <div class="page-footer__inner">
+        <a class="page-footer__logo  logo" href="index.html">Mishka</a>
 
-    <div class="page-footer__credentials">
-      <div class="page-footer__credentials-inner">
-        <span>Разработано</span>
-        <span class="page-footer__credetials-logo">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-htmlacademy"></a>
-        </span>
+        <ul class="socials  page-footer__socials">
+          <li class="socials__item">
+            <a class="social-link  social-link--in" href="https://www.instagram.com/">Instagram</a>
+          </li>
+          <li class="socials__item">
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/">Facebook</a>
+          </li>
+          <li class="socials__item">
+            <a class="social-link  social-link--tw" href="https://twitter.com/">Twitter</a>
+          </li>
+        </ul>
+
+        <div class="page-footer__credentials">
+          <div class="page-footer__credentials-inner">
+            <span>Разработано</span>
+            <span class="page-footer__credetials-logo">
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-htmlacademy"></a>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
   <script src="js/main-nav.js"></script>
 

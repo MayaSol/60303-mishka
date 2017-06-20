@@ -4,7 +4,7 @@
 
 .reviews__title {
   margin-top: 0;
-  margin-bottom: 3.8rem;
+  margin-bottom: 2.5rem;
   color: #000000;
   font-size: 2.5rem;
   font-weight: 700;
@@ -18,7 +18,7 @@
 }
 
 .reviews__item {
-  margin-bottom: 36px;
+  margin-bottom: 27px;
   color: $color-grey-dark;
   font-size: 1.5rem;
   font-weight: 400;
@@ -26,8 +26,8 @@
   word-wrap: break-word;
   min-width: 0;
 
-  p:last-child {
-    margin-bottom: 40px;
+  p:last-of-type {
+    margin-bottom: 24px;
   }
 }
 
@@ -65,10 +65,11 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 85px;
+    padding-top: 75px;
   }
 
   .reviews__title {
+    margin-bottom: 50px;
     font-size: 4.3rem;
     font-weight: 700;
     line-height: 5rem;
@@ -90,7 +91,7 @@
       }
 
       &:last-of-type {
-        margin-bottom: 68px;
+        margin-bottom: 60px;
       }
     }
   }
@@ -99,7 +100,11 @@
     margin-right: auto;
   }
 
-  .reviews__author-name,
+  .reviews__author-name {
+    display: block;
+    font-size: 1.8rem;
+  }
+
   .reviews__author-email {
     display: block;
   }
@@ -107,13 +112,14 @@
   .reviews__btn-write {
     flex-basis: 175px;
     margin-left: auto;
+    margin-top: 4px;
     order: 2;
   }
 
   .reviews__btns{
     position: absolute;
-    bottom: 9px;
-    right: 19px;
+    bottom: 14px;
+    right: 18px;
     margin-bottom: 0;
     padding: 0;
   }
@@ -128,16 +134,40 @@
 @media #{$desktop-widths} {
 
   .reviews {
-    padding-bottom: 102px;
+    padding-bottom: 0;
+    background: none;
   }
 
+  .reviews__wrapper {
+    position: relative;
+    padding-bottom: 102px;
+    padding-top: 70px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left, top;
+    background-size: auto 100%;
+    }
+
   .reviews__title {
+    margin-left: 175px;
     font-size: 5.3rem;
     font-weight: 700;
     line-height: 5.7rem;
   }
 
-  .reviews__wrapper {
-    padding-top: 80px;
+  .reviews__item {
+    margin-left: 175px;
+
+    p:last-of-type {
+      margin-bottom: 38px;
+    }
+  }
+
+  .reviews__btns {
+    bottom: 13px + 102px;
+  }
+
+  .reviews__btn-write {
+    margin-top: 9px;
   }
 }

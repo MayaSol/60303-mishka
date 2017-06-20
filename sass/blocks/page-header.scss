@@ -11,8 +11,8 @@
 .page--index {
 
   .page-header__title-wrapper {
-    padding-top: 76px;
-    min-height: 207px;
+    padding-top: 71px;
+    min-height: 212px;
     text-align: center;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-position: 50% -22px;
@@ -32,6 +32,7 @@
   .page-header__title {
     display: inline-block;
     vertical-align: middle;
+    padding-bottom: 7px;
   }
 }
 
@@ -44,19 +45,24 @@
     justify-content: space-between;
   }
 
+
 .page--index {
 
   .page-header {
-    height: 856px;
+    position: relative;
+    height: 835px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: top 0 left 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    border-image: url("../img/zigzag.png");
+    border-image-width: 0 0 10px 0;
+    border-image-repeat: repeat;
   }
 
   .page-header__title-wrapper {
     margin-top: 0;
-    margin-bottom: 371px;
+    margin-bottom: 300px;
     padding: 0;
     height: auto;
     min-height: inherit;
@@ -101,7 +107,7 @@
 
     .page-header__title-wrapper {
       margin-top: 0;
-      margin-bottom: 354px;
+      margin-bottom: 280px;
     }
   }
 
@@ -115,11 +121,11 @@
     .page-header__title-wrapper {
       margin-bottom: 99px;
     }
+  }
 
-    .page-header__title {
-      font-size: 5.3rem;
-      font-weight: 700;
-      line-height: 5.7rem;
-    }
+  .page-header__title {
+    font-size: 5.3rem;
+    font-weight: 700;
+    line-height: 5.7rem;
   }
 }

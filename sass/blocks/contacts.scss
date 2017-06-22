@@ -1,6 +1,10 @@
+.contacts__inner {
+  @include container;
+}
+
 .contacts__title {
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 27px;
   color: #000000;
   font-size: 1.8rem;
   font-weight: 700;
@@ -45,10 +49,36 @@
 }
 
 .contacts__map {
+  position: relative;
   margin-bottom: 39px;
   width: 100%;
+  min-width: $screen-mobile;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-size: 320px 457px;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 457px;
   background-color: $color-grey;
+
+  @media #{$retina} {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+}
+
+
+.map__pin {
+  position: absolute;
+  width: 67px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -34px;
+  background-image: url("../img/icon-map-pin.svg");
+}
+
+.contacts__btn-write {
+  @include container;
 }
 
 @media #{$tablet-widths} {
@@ -64,6 +94,7 @@
     align-items: center;
     width: 100%;
     height: 81px;
+    margin-bottom: 35px;
     font-size: 4.3rem;
     font-weight: 700;
     line-height: 5rem;
@@ -74,7 +105,7 @@
       display: block;
       height: 81px;
       width: 47px;
-      background-image: url("http://placehold.it/41x81");
+      background-image: url("../img/icon-flag.svg");
       }
     }
 
@@ -86,41 +117,48 @@
       font-size: 1.7rem;
     }
 
-    .contacts__item {
-      width: 300px;
+  .contacts__item {
+    width: 300px;
 //      display: flex;
 //      justify-content: space-between;
-      margin-right: 35px;
+    margin-right: 35px;
 
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+    &:nth-child(2n) {
+      margin-right: 0;
     }
+  }
 
-    .contacts__type {
-      border-right-width: 26px;
-    }
+  .contacts__type {
+    border-right-width: 26px;
+  }
 
-    .contacts__type,
-    .contacts__value {
-      width: auto;
-      height: auto;
-    }
+  .contacts__type,
+  .contacts__value {
+    width: auto;
+    height: auto;
+  }
 
-    .contacts__value {
+  .contacts__value {
 //      padding-left: 26px;
-    }
+  }
 
-    .contacts__btn-write {
-      width: 230px;
-      margin-right: auto;
-      margin-left: auto;
-    }
+  .contacts__btn-write {
+    width: 230px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-    .contacts__map {
-      width: 100%;
-      margin-bottom: 50px;
+  .contacts__map {
+    width: 100%;
+    margin-bottom: 50px;
+    background-image: url("../img/map-tablet@1x.jpg");
+    background-size: 768px 457px;
+
+    @media #{$retina} {
+      background-image: url("../img/map-tablet@2x.jpg");
     }
+  }
+
 }
 
 
@@ -178,6 +216,8 @@
     right: 0;
     width: 525px;
     height: 457px;
+    background-image: url("../img/map-desktop@1x.jpg");
+    background-size: 525px 457px;
   }
 
 }

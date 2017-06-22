@@ -13,31 +13,51 @@
         <nav class="main-nav">
           <div class="main-nav__inner">
             <div class="main-nav__header">
-              <a class="logo  main-nav__logo">Mishka</a>
+              <a class="logo  logo--main  main-nav__logo">Mishka</a>
               <a class="main-nav__toggle"></a>
             </div>
             <a class="main-nav__link  main-nav__link--catalog" href="catalog.html">
-              <span>Каталог товаров</span>
+              <span class="main-nav__link-inner">
+                <span class="main-nav__link-text">Каталог товаров</span>
+              </span>
             </a>
             <a class="main-nav__link  main-nav__link--form" href="form.html">
-              <span>Вязание на заказ</span>
+              <span class="main-nav__link-inner">
+                <span class="main-nav__link-text">Вязание на заказ</span>
+              </span>
             </a>
             <a class="main-nav__link  main-nav__link--search" href="#">
-              <span>Поиск по сайту</span>
+              <span class="main-nav__link-inner">
+                <svg class="main-nav__icon-search" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                </svg>
+                <span class="main-nav__link-text">Поиск по сайту</span>
+              </span>
             </a>
             <div class="main-nav__user-section">
               <a class="main-nav__link  main-nav__link--cart" href="#">
-                <span>Корзина: пока пуста</span>
+                <span class="main-nav__link-inner">
+                  <svg class="main-nav__icon-cart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                    <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                  </svg>
+                  <span class="main-nav__link-text">Корзина: пока пуста</span>
+                </span>
               </a>
             </div>
             <a class="main-nav__link  main-nav__link--new" href="new.html">
-              <span>Новые поступления</span>
+              <span class="main-nav__link-inner">
+                <span class="main-nav__link-text">Новые поступления</span>
+              </span>
             </a>
             <a class="main-nav__link  main-nav__link--sale" href="sale.html">
-              <span>Распродажа</span>
+              <span class="main-nav__link-inner">
+                <span class="main-nav__link-text">Распродажа</span>
+              </span>
             </a>
             <a class="main-nav__link  main-nav__link--delivery">
-              <span>Бесплатная доставка по России</span>
+              <span class="main-nav__link-inner">
+                <span class="main-nav__link-text">Бесплатная доставка по России</span>
+              </span>
             </a>
           </div>
         </nav>
@@ -93,11 +113,19 @@
           </table>
 
           <div class="product__img">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
+          <picture>
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x,
+                      img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg"
+              srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
           </div>
           <div class="product__price">Цена: 990 руб.</div>
           <div class="product__btn-order">
-            <a class="btn" href="#">ЗАКАЗАТЬ</a>
+            <a class="btn  btn--main" href="#">ЗАКАЗАТЬ</a>
           </div>
         </div>
       </article>
@@ -118,7 +146,7 @@
                 Увеличивает лайки <br>на фотографиях
               </li>
               <li class="main-features__item  main-features__item--manual">
-                Связано вручную с любовью и умилением
+                Связано вручную с <br>любовью и умилением
               </li>
               <li class="main-features__item  main-features__item--domestic">
                 Поддержка отечественного производителя
@@ -145,19 +173,28 @@
           </div>
 
           <div class="reviews__btns">
-            <a class="slider__btn  slider__btn--prev  reviews__btn-prev"></a>
-            <a class="slider__btn  slider__btn--next  reviews__btn-next"></a>
+            <a class="slider__btn  slider__btn--prev  reviews__btn-prev">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
+              <polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "/>
+            </svg>
+            </a>
+            <a class="slider__btn  slider__btn--next  reviews__btn-next">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
+                <polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/>
+              </svg>
+            </a>
           </div>
 
           <div class="reviews__btn-write">
-            <a class="btn" href="reviews.html">Написать</a>
+            <a class="btn btn--main" href="reviews.html">Написать</a>
           </div>
         </div>
       </section>
 
       <div class="page-main__section-wrapper">
         <section class="contacts  page-main__contacts">
-          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__inner">
+            <h2 class="contacts__title">Контакты</h2>
             <ul class="contacts__list">
               <li class="contacts__item">
                 <span class="contacts__type">e-mail:</span>
@@ -171,11 +208,14 @@
                 </span>
               </li>
             </ul>
+          </div>
 
-          <div class="contacts__map  map"></div>
+          <div class="contacts__map  map" id="map">
+            <div class="map__pin"></div>
+          </div>
 
           <div class="contacts__btn-write">
-            <a class="btn" href="contacts.html">Напишите нам</a>
+            <a class="btn btn--main" href="contacts.html">Напишите нам</a>
           </div>
         </section>
       </div>
@@ -184,7 +224,7 @@
 
     <footer  class="page-footer">
       <div class="page-footer__inner">
-        <a class="page-footer__logo  logo">Mishka</a>
+        <a class="page-footer__logo  logo  logo--footer">Mishka</a>
 
         <ul class="socials  page-footer__socials">
           <li class="socials__item">
@@ -241,6 +281,7 @@
 
     <script src="js/main-nav.js"></script>
     <script src="js/modal-order.js"></script>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac89537b328ae21c33811249af7034b1ac359d35fbeeb9df153d7655b50f39acf&amp;width=100%25&amp;height=457&amp;id=map&amp;lang=ru_RU&amp;scroll=true"></script>
 
   </body>
 </html>

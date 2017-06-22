@@ -9,14 +9,22 @@
 
   &--prev {
     float: left;
-    background-image: url("../img/icon-left-arrow.svg");
-    background-repeat: no-repeat;
   }
 
   &--next {
     float: right;
-    background-image: url("../img/icon-right-arrow.svg");
-    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    svg polygon {
+      fill: rgba(0,0,0,0.6)
+    }
+  }
+
+  &:active {
+    svg polygon {
+      fill: rgba(0,0,0,0.3)
+    }
   }
 
 }

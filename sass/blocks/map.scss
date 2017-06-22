@@ -1,0 +1,12 @@
+.map {
+  position: relative;
+}
+
+.map__pin {
+  position: absolute;
+  width: 67px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -34px;
+  background-image: url("../img/icon-map-pin.svg");
+}

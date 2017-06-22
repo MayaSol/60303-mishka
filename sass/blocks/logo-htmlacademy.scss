@@ -3,4 +3,9 @@
   width: 27px;
   height: 34px;
   background-image: url("../img/logo-htmlacademy.svg");
+
+  &:hover,
+  &:active {
+    background-image: url("../img/logo-htmlacademy-hover.svg");
+  }
 }

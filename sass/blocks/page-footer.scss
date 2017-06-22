@@ -20,6 +20,7 @@
 .page-footer__credentials-inner {
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 
   span {
     display: inline-block;
@@ -28,6 +29,19 @@
     font-weight: 700;
     line-height: 1.8rem;
     color: #000000;
+  }
+
+  &:hover {
+    a {
+      background-image: url("../img/logo-htmlacademy-hover.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    a {
+      background-image: url("../img/logo-htmlacademy-hover.svg");
+    }
   }
 }
 

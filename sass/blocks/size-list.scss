@@ -13,7 +13,7 @@
   align-items: center;
   width: 82px;
   height: 52px;
-  border: 2px solid $color-grey-dark;
+  border: 2px solid rgba(68, 68, 68, 0.1);
   box-sizing: border-box;
   color: $color-grey-dark;
   font-size: 1.7rem;
@@ -21,6 +21,10 @@
   line-height: 1.6rem;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .size-list__input {

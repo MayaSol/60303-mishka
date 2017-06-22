@@ -1,12 +1,14 @@
 .products__item {
   font-size: 0;
   line-height: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 }
 
 .item-products__img {
   display: block;
   background-color: $color-grey;
+  width: 260px;
+  height: 195px;
 
   img {
     width: 100%;
@@ -19,8 +21,17 @@
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 3rem;
+  background-color: #ffffff;
   color: $color-grey-dark;
   border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .item-products__text {
@@ -28,6 +39,7 @@
   h1 {
     margin-top: 0;
     margin-bottom: 6px;
+    line-height: 2.4rem;
   }
 
   p {
@@ -50,6 +62,14 @@
     line-height: 2.4rem;
     color: #000000;
     text-decoration: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -164,6 +184,7 @@
   .products__item {
     flex-direction: column;
     margin-right: 51px;
+    margin-bottom: 58px;
 
     &:nth-child(3n) {
       margin-right: 0;

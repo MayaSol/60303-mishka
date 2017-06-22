@@ -1,6 +1,41 @@
 .logo {
   display: block;
-  background-image: url("../img/logo-mobile.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--footer {
+    background-image: url("../img/logo-footer.svg");
+  }
+
+  &--main {
+    background-image: url("../img/logo-mobile.svg");
+  }
+}
+
+@media #{$tablet-widths} {
+
+  .logo {
+
+    &--main {
+      background-image: url("../img/logo-tablet.svg");
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+
+  .logo {
+
+    &--main {
+      background-image: url("../img/logo-desktop.svg");
+    }
+  }
 }

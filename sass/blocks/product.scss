@@ -54,7 +54,14 @@
 }
 
 .product__img {
-  margin-bottom: 20px;
+  width: 260px;
+  height: 315px;
+  margin-bottom: 25px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .product__price {

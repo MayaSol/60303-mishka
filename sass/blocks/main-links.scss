@@ -1,9 +1,21 @@
 .main-links__link {
   display: block;
-  min-height: 119px;
-  line-height: 119px;
+  min-height: 103px;
+  line-height: 103px;
   color: #ffffff;
   text-decoration: none;
+
+  &:hover {
+    padding-bottom: 5px;
+  }
+
+  &:active {
+
+    span,
+    .main-links__container {
+      opacity: 0.5;
+    }
+  }
 }
 
 .main-links__container {
@@ -65,11 +77,19 @@
   .main-links {
     @include container;
     display: flex;
+    align-items: flex-end;
   }
 
   .main-links__link {
+    min-height: 107px;
+    line-height: 107px;
+    padding-bottom: 12px;
     width: 50%;
     padding-left: 36px;
+
+    &:hover {
+      padding-bottom: 19px;
+    }
   }
 
   .main-links__container {

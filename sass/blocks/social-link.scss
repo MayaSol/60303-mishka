@@ -5,18 +5,45 @@
     width: 22px;
     height: 21px;
     background-image: url("../img/icon-insta.svg");
+
+    &:hover {
+      background-image: url("../img/icon-insta-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/icon-insta-hover.svg");
+      opacity: 0.3;
+    }
   }
 
   &--fb {
     width: 15px;
     height: 29px;
     background-image: url("../img/icon-fb.svg");
+
+    &:hover {
+      background-image: url("../img/icon-fb-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/icon-fb-hover.svg");
+      opacity: 0.3;
+    }
   }
 
   &--tw {
     width: 24px;
     height: 20px;
     background-image: url("../img/icon-twitter.svg");
+
+    &:hover {
+      background-image: url("../img/icon-twitter-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/icon-twitter-hover.svg");
+      opacity: 0.3;
+    }
   }
 
 }

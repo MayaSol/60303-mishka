@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка - Вязание на заказ</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page  page--form">
   <header class="page-header">
@@ -11,7 +12,7 @@
     <nav class="main-nav">
       <div class="main-nav__inner">
         <div class="main-nav__header">
-          <a class="logo  logo--main  main-nav__logo">Mishka</a>
+          <a class="logo  logo--main  main-nav__logo" href="index.html">Mishka</a>
           <a class="main-nav__toggle"></a>
         </div>
         <a class="main-nav__link  main-nav__link--catalog" href="catalog.html">
@@ -19,7 +20,7 @@
             <span class="main-nav__link-text">Каталог товаров</span>
           </span>
         </a>
-        <a class="main-nav__link  main-nav__link--form" href="form.html">
+        <a class="main-nav__link  main-nav__link--form">
           <span class="main-nav__link-inner">
             <span class="main-nav__link-text">Вязание на заказ</span>
           </span>
@@ -67,13 +68,15 @@
   </header>
 
 
-  <main>
+  <main class="page-main">
 
-    <form class="form  form--order" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form  form--order  page-main__form" action="https://echo.htmlacademy.ru/" method="post">
 
-      <div class="form__intro">
-        <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-        </p>
+      <div class="form__container-inner">
+        <div class="form__intro">
+          <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+        </div>
       </div>
 
       <div class="form__container">
@@ -237,7 +240,7 @@
       </div>
     </footer>
 
-  <script src="js/main-nav.js"></script>
+  <script src="js-mini/main-nav.js"></script>
 
 </body>
 </html>

@@ -1,17 +1,22 @@
+@media #{$tablet-widths} {
+  .page-main {
+      position: relative;
+      z-index: 1;
+      margin-top: -12px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 24px;
+      background-position: top center;
+  }
+}
+
 .page--index {
 
   .page-main {
     padding-top: 29px;
 
     @media #{$tablet-widths} {
-      position: relative;
-      z-index: 1;
       padding-top: 56px;
-      margin-top: -12px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-repeat: repeat-x;
-      background-size: auto 24px;
-      background-position: top center;
     }
 
     @media #{$desktop-widths} {
@@ -78,11 +83,11 @@
     @include container;
 
     @media #{$tablet-widths} {
-      padding-top: 79px;
+      padding-top: 91px;
     }
 
     @media #{$desktop-widths} {
-      padding-top: 128px;
+      padding-top: 140px;
     }
   }
 }
@@ -102,5 +107,22 @@
   @media #{$desktop-widths} {
     padding-top: 23px;
     background-size: auto 23px;
+  }
+}
+
+.page--form {
+
+  @media #{$tablet-widths} {
+
+    .page-main__form {
+      padding-top: 83px;
+    }
+  }
+
+  @media #{$desktop-widths} {
+
+    .page-main__form {
+      padding-top: 132px;
+    }
   }
 }

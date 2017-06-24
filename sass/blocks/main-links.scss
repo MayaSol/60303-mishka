@@ -77,14 +77,17 @@
   .main-links {
     @include container;
     display: flex;
+/*min-height  > чем у main-links_link:hover, чтобы не смещался нижний блок в Chrome*/
+    min-height: 150px;
     align-items: flex-end;
   }
 
   .main-links__link {
+    width: 50%;
+    margin-top: auto;
     min-height: 107px;
     line-height: 107px;
     padding-bottom: 12px;
-    width: 50%;
     padding-left: 36px;
 
     &:hover {

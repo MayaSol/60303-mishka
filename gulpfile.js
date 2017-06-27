@@ -13,6 +13,7 @@ var del = require("del");
 var run = require("run-sequence");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
+var csscomb = require("gulp-csscomb");
 
 gulp.task("clean", function() {
   return del("build");
@@ -23,6 +24,7 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "js/**",
+    "js-mini/**",
     "*.html"
   ], {
     base: "."
@@ -39,6 +41,7 @@ gulp.task("style", function() {
         "last 2 versions"
       ]})
     ]))
+    .pipe(csscomb())
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))

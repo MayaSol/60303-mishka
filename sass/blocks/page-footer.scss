@@ -4,39 +4,46 @@
 
 .page-footer__socials {
   min-height: 80px;
+
   line-height: 80px;
+
   border-bottom: 1px solid $color-grey;
+
   @include container;
 }
 
 .page-footer__credentials {
   min-height: 79px;
-  line-height: 79px;
+
   font-size: 0;
+  line-height: 79px;
+
   text-align: center;
+
   @include container;
 }
 
 .page-footer__credentials-inner {
   display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
 
+  cursor: pointer;
+  vertical-align: middle;
   span {
     display: inline-block;
-    vertical-align: middle;
+
     font-size: 1.9rem;
     font-weight: 700;
     line-height: 1.8rem;
+
+    vertical-align: middle;
+
     color: #000000;
   }
-
   &:hover {
     a {
       background-image: url("../img/logo-htmlacademy-hover.svg");
     }
   }
-
   &:active {
     opacity: 0.3;
     a {
@@ -54,10 +61,11 @@
 }
 
 @media #{$tablet-widths} {
-
   .page-footer__inner {
-    min-height: 143px;
     display: flex;
+
+    min-height: 143px;
+
     justify-content: space-between;
     align-items: center;
     @include container;
@@ -65,27 +73,29 @@
 
   .page-footer__logo {
     display: block;
+
     width: 102px;
     height: 34px;
+
     text-indent: -10000px;
   }
 
   .page-footer__socials {
-    height: auto;
     width: auto;
+    height: auto;
     margin-left: 159px;
+
     border: none;
   }
 
   .page-footer__credentials {
-    height: auto;
     width: auto;
+    height: auto;
     margin: 0;
   }
 }
 
 @media #{$desktop-widths} {
-
   .page-footer__socials {
     margin-left: 350px;
   }
